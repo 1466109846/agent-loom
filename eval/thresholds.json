@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "suite": "loom-u2-fixed-v1",
+  "false_negatives_max": 0,
+  "relations": {
+    "reported": {
+      "exact": {
+        "min_precision": 0.98
+      },
+      "likely": {
+        "min_precision": 0.95
+      }
+    },
+    "labels": {
+      "no_correct_loss": true,
+      "no_new_errors": true
+    },
+    "recall_no_regression_per_language": true
+  },
+  "questions": {
+    "no_fact_pass_regression": true,
+    "contract2_all_applicable_pass": true,
+    "memory_top5_no_regression": true
+  },
+  "resources": {
+    "min_rounds": 5,
+    "median_increase_explain_above": 0.1,
+    "idle_seconds": 30,
+    "formal_requires_interleaved": true,
+    "idle_working_set_goal_bytes": 104857600,
+    "memory_goal_is_advisory": true
+  },
+  "task_context": {
+    "evidence_no_loss": true,
+    "strictly_fewer_requests_or_bytes": true,
+    "compare_to": "same candidate executable legacy path",
+    "unsupported": "not_applicable"
+  },
+  "external_test_gates": [
+    "budget overrun: repository CLI/MCP/core budget tests",
+    "credential leakage: repository redact/structure boundary tests",
+    "project database mixing: repository project identity tests",
+    "concurrent generation mixing: CONTRACT section 4 atomic generation tests (U-1 implementation)"
+  ]
+}

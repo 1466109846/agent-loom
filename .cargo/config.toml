@@ -1,0 +1,3 @@
+[env]
+# Cargo 启动的测试及其子进程默认看不到本机的配置和凭据。
+LOOM_CONFIG = { value = "target/isolated-loom-config/config.toml", relative = true, force = true }

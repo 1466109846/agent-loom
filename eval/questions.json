@@ -1,0 +1,1691 @@
+{
+  "schema": 1,
+  "suite": "loom-u2-fixed-v1",
+  "frozen_before_candidate": true,
+  "baseline": {
+    "sha256": "c043355f8a5619925aff193c307b74ab749e4decbdf01ac8f5fab676df8b37dd",
+    "revision": 8,
+    "source_commit": "cc2a954",
+    "source_tree": "8713ddf2f4346502aef1a0fd77564c96637434a0"
+  },
+  "allowed_work_root": "work",
+  "samples": {
+    "loom-rust": {
+      "source": "samples/loom-rust",
+      "revision": "cc2a954 (export without .git)",
+      "head": null,
+      "manifest": {
+        "sha256": "b460b4c74ecb1ffcc9306ea06c9de91bd6aed45f59dccd0fa3ba0f4656b5a333",
+        "files": 103,
+        "algorithm": "sorted relative POSIX path + NUL + file SHA256 + LF; exclude .git and .loom at every level"
+      },
+      "language": "Rust",
+      "resource_target": "crates/loom-core/src/continuity/text.rs",
+      "touch": "crates/loom-core/src/continuity/text.rs",
+      "resource_selection": "rev8 isolated graph: nonzero total-degree median 1; this Rust file has 1 outgoing + 1 incoming, closest possible with both directions nonempty",
+      "git_info_exclude_sha256": null,
+      "comment": "// fixed-eval touch\n"
+    },
+    "vue-element-admin": {
+      "source": "samples/vue-element-admin",
+      "revision": "6858a9ad67483025f6a9432a926beb9327037be3",
+      "head": "6858a9ad67483025f6a9432a926beb9327037be3",
+      "manifest": {
+        "sha256": "435496d388082a2ec7ff192cbb37d81f5d838496c009b9b440b013abbfc5c109",
+        "files": 307,
+        "algorithm": "sorted relative POSIX path + NUL + file SHA256 + LF; exclude .git and .loom at every level"
+      },
+      "language": "JS/Vue",
+      "resource_target": "mock/mock-server.js",
+      "touch": "mock/mock-server.js",
+      "resource_selection": "rev8 isolated graph: nonzero total-degree median 2; this JS file has 1 outgoing + 1 incoming",
+      "git_info_exclude_sha256": null,
+      "comment": "// fixed-eval touch\n"
+    },
+    "oh-memos": {
+      "source": "samples/oh-memos",
+      "revision": "810627efafacb7845f4a3cb2031ae8b0bf00473d",
+      "head": "810627efafacb7845f4a3cb2031ae8b0bf00473d",
+      "manifest": {
+        "sha256": "06d6b82526dc808577555300274e6ceb624457f3cea5002785a23ea6097014f0",
+        "files": 925,
+        "algorithm": "sorted relative POSIX path + NUL + file SHA256 + LF; exclude .git and .loom at every level"
+      },
+      "language": "Python",
+      "resource_target": "mcp-server/handlers/calendar.py",
+      "touch": "mcp-server/handlers/calendar.py",
+      "resource_selection": "rev8 isolated graph: nonzero total-degree median 5; this Python file has 4 outgoing + 1 incoming",
+      "git_info_exclude_sha256": null,
+      "comment": "# fixed-eval touch\n"
+    }
+  },
+  "fixtures": {
+    "mixed": {
+      "files": {
+        "entry.ts": "import './exact.ts';\nimport './fallback.js';\n",
+        "exact.ts": "export const exact = 1;\n",
+        "fallback.ts": "export const fallback = 1;\n",
+        "unused.ts": "export const unused = 1;\n"
+      }
+    },
+    "clean": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "unused.ts": "export const unused = 1;\n",
+        "caller.ts": "import './target.ts';\n"
+      }
+    },
+    "syntax": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "caller.ts": "import {\n"
+      }
+    },
+    "large": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "caller.ts": {
+          "repeat": "// padding\n",
+          "count": 105000,
+          "suffix": "import './target.ts';\n"
+        }
+      }
+    },
+    "encoding": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "caller.ts": {
+          "hex": "fffe0069006d0070006f0072007400"
+        }
+      }
+    },
+    "dynamic": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "caller.ts": "const path = \"./target.ts\";\nimport(path);\n"
+      }
+    },
+    "unresolved": {
+      "files": {
+        "entry.ts": "import './missing.ts';\n",
+        "target.ts": "export const target = 1;\n"
+      }
+    },
+    "absent": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "readme.md": "# Unmanaged\n"
+      }
+    },
+    "no-index": {
+      "files": {
+        "target.ts": "export const target = 1;\n"
+      },
+      "index": false
+    },
+    "source-changed": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "caller.ts": "import './target.ts';\n"
+      },
+      "after": {
+        "caller.ts": "export const removed = 1;\n"
+      }
+    },
+    "target-changed": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "caller.ts": "import './target.ts';\n"
+      },
+      "after": {
+        "target.ts": "export const target = 2;\n"
+      }
+    },
+    "config-changed": {
+      "files": {
+        "tsconfig.json": "{\"compilerOptions\":{\"baseUrl\":\".\",\"paths\":{\"@/*\":[\"src/*\"]}}}\n",
+        "src/entry.ts": "import '@/target';\n",
+        "src/target.ts": "export const value = 1;\n",
+        "other/target.ts": "export const value = 2;\n"
+      },
+      "after": {
+        "tsconfig.json": "{\"compilerOptions\":{\"baseUrl\":\".\",\"paths\":{\"@/*\":[\"other/*\"]}}}\n"
+      }
+    },
+    "added": {
+      "files": {
+        "target.ts": "export const target = 1;\n"
+      },
+      "after": {
+        "new.ts": "import './target.ts';\n"
+      }
+    },
+    "many": {
+      "files": {
+        "target.ts": "export const target = 1;\n"
+      },
+      "generate": {
+        "callers": 70,
+        "target": "target.ts"
+      }
+    },
+    "preview": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "broken.ts": "import {\n"
+      },
+      "generate": {
+        "callers": 30,
+        "target": "target.ts",
+        "long": true
+      }
+    },
+    "chain": {
+      "files": {
+        "a.ts": "import './b.ts';\n",
+        "b.ts": "import './c.ts';\n",
+        "c.ts": "export const c = 1;\n"
+      }
+    },
+    "empty": {
+      "files": {
+        "readme.md": "# No supported source files\n"
+      }
+    },
+    "ambiguous": {
+      "files": {
+        "entry.ts": "import './thing.js';\n",
+        "thing.js": "export const x = 1;\n",
+        "thing.ts": "export const x = 2;\n"
+      }
+    },
+    "ignored": {
+      "files": {
+        ".gitignore": "hidden/\n",
+        "target.ts": "export const target = 1;\n",
+        "hidden/caller.ts": "import '../target.ts';\n"
+      }
+    },
+    "refresh": {
+      "files": {
+        "target.ts": "export const target = 1;\n",
+        "caller.ts": "import './target.ts';\n"
+      },
+      "after": {
+        "caller.ts": "export const removed = 1;\n"
+      },
+      "reindex": true
+    },
+    "memory": {
+      "files": {
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true
+    },
+    "memory-changed": {
+      "files": {
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "after": {
+        "target.ts": "export const target = 2;\n"
+      }
+    },
+    "memory-archived": {
+      "files": {
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "archive": true
+    },
+    "task-1": {
+      "files": {
+        "entry.ts": "import './target.ts';\n",
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "knowledge_target": "target.ts"
+    },
+    "task-2": {
+      "files": {
+        "entry.ts": "import './target.ts';\n",
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "knowledge_target": "entry.ts"
+    },
+    "task-3": {
+      "files": {
+        "entry.ts": "import './target.ts';\n",
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "knowledge_target": "target.ts",
+      "after": {
+        "entry.ts": "export const removed = 1;\n"
+      }
+    },
+    "task-4": {
+      "files": {
+        "entry.ts": "import './target.ts';\n",
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "knowledge_target": "target.ts",
+      "after": {
+        "target.ts": "export const target = 2;\n"
+      }
+    },
+    "task-5": {
+      "files": {
+        "entry.ts": "import './target.ts';\n",
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "knowledge_target": "target.ts",
+      "archive": true
+    },
+    "task-6": {
+      "files": {
+        "entry.ts": "import './target.ts';\n",
+        "target.ts": "export const target = 1;\n"
+      },
+      "knowledge": true,
+      "knowledge_target": "target.ts",
+      "proposal": true
+    }
+  },
+  "questions": [
+    {
+      "id": "S01",
+      "kind": "structure",
+      "title": "依赖中的静态确定与可能分别展示",
+      "fixture": "mixed",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "entry.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "entry.ts",
+            "target": "exact.ts",
+            "line": 1,
+            "confidence": "exact",
+            "hop": 1
+          },
+          {
+            "source": "entry.ts",
+            "target": "fallback.ts",
+            "line": 2,
+            "confidence": "likely",
+            "hop": 1
+          }
+        ],
+        "text_all": [
+          "静态确定",
+          "可能"
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": []
+      }
+    },
+    {
+      "id": "S02",
+      "kind": "structure",
+      "title": "被引用关系和使用方行号",
+      "fixture": "clean",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "caller.ts",
+            "target": "target.ts",
+            "line": 1,
+            "confidence": "exact",
+            "hop": 1
+          }
+        ],
+        "text_all": [
+          "caller.ts → target.ts",
+          "第 1 行"
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": []
+      }
+    },
+    {
+      "id": "S03",
+      "kind": "structure",
+      "title": "没有缺口的真否定也限定于快照受管范围",
+      "fixture": "clean",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "unused.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "snapshot_caveat": true
+      },
+      "contract": {
+        "verdict": "none_in_snapshot",
+        "gaps": []
+      }
+    },
+    {
+      "id": "S04",
+      "kind": "structure",
+      "title": "语法错误使用方不能支持否定",
+      "fixture": "syntax",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "gap_text": true,
+        "coverage_min": {
+          "uncovered_files": 1
+        }
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "uncovered_files"
+        ],
+        "uncovered": {
+          "syntax_error": 1
+        }
+      }
+    },
+    {
+      "id": "S05",
+      "kind": "structure",
+      "title": "超过一 MiB 的使用方不能支持否定",
+      "fixture": "large",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "gap_text": true,
+        "coverage_min": {
+          "uncovered_files": 1
+        }
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "uncovered_files"
+        ],
+        "uncovered": {
+          "too_large": 1
+        }
+      }
+    },
+    {
+      "id": "S06",
+      "kind": "structure",
+      "title": "非 UTF-8 使用方不能支持否定",
+      "fixture": "encoding",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "gap_text": true,
+        "coverage_min": {
+          "uncovered_files": 1
+        }
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "uncovered_files"
+        ],
+        "uncovered": {
+          "invalid_utf8": 1
+        }
+      }
+    },
+    {
+      "id": "S07",
+      "kind": "structure",
+      "title": "别处动态表达式导入构成入边查询缺口",
+      "fixture": "dynamic",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "gap_text": true,
+        "coverage_min": {
+          "unresolved_refs": 1
+        }
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "unresolved_refs"
+        ]
+      }
+    },
+    {
+      "id": "S08",
+      "kind": "structure",
+      "title": "只有未确定引用时交代缺口",
+      "fixture": "unresolved",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "entry.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "issues": [
+          {
+            "source": "entry.ts",
+            "line": 1,
+            "state": "missing"
+          }
+        ],
+        "gap_text": true
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "unresolved_refs"
+        ]
+      }
+    },
+    {
+      "id": "S09",
+      "kind": "structure",
+      "title": "不存在的目标不等于没有依赖",
+      "fixture": "absent",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "missing.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "status": "absent",
+        "text_any": [
+          "不在本次受管范围内",
+          "不在",
+          "未纳入"
+        ]
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "absent"
+        ],
+        "verification_empty": true
+      }
+    },
+    {
+      "id": "S10",
+      "kind": "structure",
+      "title": "不受管 markdown 不等于没有依赖",
+      "fixture": "absent",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "readme.md",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "status": "absent",
+        "text_any": [
+          "不在本次受管范围内",
+          "不在",
+          "未纳入"
+        ]
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "absent"
+        ],
+        "verification_empty": true
+      }
+    },
+    {
+      "id": "S11",
+      "kind": "structure",
+      "title": "未索引明确提示建快照",
+      "fixture": "no-index",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "status": "not_indexed",
+        "text_any": [
+          "未索引",
+          "尚未",
+          "还没有",
+          "index"
+        ]
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "not_indexed"
+        ],
+        "snapshot_null": true,
+        "verification_empty": true
+      }
+    },
+    {
+      "id": "S12",
+      "kind": "structure",
+      "title": "删导入未刷新指出使用方变化",
+      "fixture": "source-changed",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "caller.ts",
+            "target": "target.ts",
+            "line": 1,
+            "confidence": "exact",
+            "hop": 1
+          }
+        ],
+        "changed_paths": [
+          "caller.ts"
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": [
+          "changed"
+        ],
+        "files": {
+          "caller.ts": "changed"
+        }
+      }
+    },
+    {
+      "id": "S13",
+      "kind": "structure",
+      "title": "改目标未刷新指出目标变化",
+      "fixture": "target-changed",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "changed_paths": [
+          "target.ts"
+        ]
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "changed"
+        ],
+        "files": {
+          "target.ts": "changed"
+        }
+      }
+    },
+    {
+      "id": "S14",
+      "kind": "structure",
+      "title": "改 paths 未刷新指出配置输入变化",
+      "fixture": "config-changed",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "src/entry.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "src/entry.ts",
+            "target": "src/target.ts",
+            "line": 1,
+            "confidence": "likely",
+            "hop": 1
+          }
+        ],
+        "text_regex": [
+          "(?:ecma|配置|输入).*(?:变化|改变|已变)"
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": [
+          "inputs_changed"
+        ],
+        "inputs": {
+          "ecma": "changed"
+        }
+      }
+    },
+    {
+      "id": "S15",
+      "kind": "structure",
+      "title": "新增使用方未刷新保留未扫描新增文件的边界",
+      "fixture": "added",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "snapshot_caveat": true,
+        "text_regex": [
+          "(?:新增|新添|新文件).*(?:查不出|未|没有|不能|无法)"
+        ]
+      },
+      "contract": {
+        "verdict": "none_in_snapshot",
+        "gaps": []
+      }
+    },
+    {
+      "id": "S16",
+      "kind": "structure",
+      "title": "七十条入边撞到查询上限",
+      "fixture": "many",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 64,
+        "truncated": true,
+        "text_regex": [
+          "(?:上限|截断|限额|截短|最多|更多)"
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": [
+          "truncated"
+        ]
+      }
+    },
+    {
+      "id": "S17",
+      "kind": "structure",
+      "title": "MCP 预览保留缺口和完整证据行并计数省略",
+      "fixture": "preview",
+      "sample": null,
+      "request": {
+        "transport": "mcp",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 30,
+        "gap_text": true,
+        "max_text_bytes": 1500,
+        "whole_relation_lines": true,
+        "omission_counts": true
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": [
+          "uncovered_files"
+        ],
+        "uncovered": {
+          "syntax_error": 1
+        }
+      }
+    },
+    {
+      "id": "S18",
+      "kind": "structure",
+      "title": "深度二的证据标明跳数",
+      "fixture": "chain",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "a.ts",
+        "depth": 2,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "a.ts",
+            "target": "b.ts",
+            "line": 1,
+            "confidence": "exact",
+            "hop": 1
+          },
+          {
+            "source": "b.ts",
+            "target": "c.ts",
+            "line": 1,
+            "confidence": "exact",
+            "hop": 2
+          }
+        ],
+        "text_all": [
+          "第 2 跳"
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": []
+      }
+    },
+    {
+      "id": "S19",
+      "kind": "structure",
+      "title": "空范围明确范围缺口而非没有依赖",
+      "fixture": "empty",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "nothing.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "status": "absent",
+        "coverage_exact": {
+          "managed_files": 0
+        },
+        "text_any": [
+          "受管范围",
+          "空范围"
+        ]
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "absent",
+          "empty_scope"
+        ],
+        "verification_empty": true
+      }
+    },
+    {
+      "id": "S20",
+      "kind": "structure",
+      "title": "书写文件与替代源码并存不任选候选",
+      "fixture": "ambiguous",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "entry.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "issues": [
+          {
+            "source": "entry.ts",
+            "line": 1,
+            "state": "ambiguous",
+            "candidates": [
+              "thing.js",
+              "thing.ts"
+            ]
+          }
+        ],
+        "text_all": [
+          "有多个候选"
+        ]
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "unresolved_refs"
+        ]
+      }
+    },
+    {
+      "id": "S21",
+      "kind": "structure",
+      "title": "唯一使用方被忽略时仅对受管快照否定",
+      "fixture": "ignored",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "snapshot_caveat": true,
+        "text_regex": [
+          "排除.*(?:目录|个)|(?:目录|个).*排除"
+        ],
+        "text_not": [
+          "hidden/caller.ts"
+        ]
+      },
+      "contract": {
+        "verdict": "none_in_snapshot",
+        "gaps": [],
+        "excluded_dirs_min": 1,
+        "scope": "git"
+      }
+    },
+    {
+      "id": "S22",
+      "kind": "structure",
+      "title": "显式刷新撤边且代次推进",
+      "fixture": "refresh",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "impact",
+        "target": "target.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relation_count": 0,
+        "snapshot_caveat": true
+      },
+      "contract": {
+        "verdict": "none_in_snapshot",
+        "gaps": [],
+        "generation_advanced": true
+      }
+    },
+    {
+      "id": "S23",
+      "kind": "structure",
+      "title": "目标本身语法不完整属于未覆盖",
+      "fixture": "syntax",
+      "sample": null,
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "caller.ts",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "gap_text": true,
+        "text_any": [
+          "未覆盖",
+          "语法"
+        ]
+      },
+      "contract": {
+        "verdict": "gap",
+        "gaps": [
+          "target_uncovered"
+        ]
+      }
+    },
+    {
+      "id": "S24",
+      "kind": "structure",
+      "title": "真实 Rust 文件模块声明证据",
+      "fixture": null,
+      "sample": "loom-rust",
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "crates/loom-core/src/lib.rs",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "crates/loom-core/src/lib.rs",
+            "target": "crates/loom-core/src/admission.rs",
+            "line": 3,
+            "confidence": "exact",
+            "hop": 1
+          }
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": [
+          "unresolved_refs"
+        ]
+      }
+    },
+    {
+      "id": "S25",
+      "kind": "structure",
+      "title": "真实 Vue 项目 paths 别名只能算可能",
+      "fixture": null,
+      "sample": "vue-element-admin",
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "src/utils/get-page-title.js",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "src/utils/get-page-title.js",
+            "target": "src/settings.js",
+            "line": 1,
+            "confidence": "likely",
+            "hop": 1
+          }
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": []
+      }
+    },
+    {
+      "id": "S26",
+      "kind": "structure",
+      "title": "真实 Python src 包导入证据",
+      "fixture": null,
+      "sample": "oh-memos",
+      "request": {
+        "transport": "cli",
+        "command": "explain",
+        "target": "src/oh_memos/log.py",
+        "depth": 1,
+        "json_diagnostic": true
+      },
+      "facts": {
+        "relations": [
+          {
+            "source": "src/oh_memos/log.py",
+            "target": "src/oh_memos/settings.py",
+            "line": 16,
+            "confidence": "likely",
+            "hop": 1
+          }
+        ]
+      },
+      "contract": {
+        "verdict": "found",
+        "gaps": [
+          "unresolved_refs"
+        ]
+      }
+    },
+    {
+      "id": "M01",
+      "kind": "memory",
+      "title": "按锚定文件找回标题中没有路径的经验",
+      "fixture": "memory",
+      "request": {
+        "transport": "cli",
+        "command": "recall",
+        "query": "target.ts",
+        "top_k": 5,
+        "full": false
+      },
+      "facts": {
+        "text_all": [
+          "$memory_id"
+        ],
+        "top5_id": "$memory_id"
+      },
+      "contract": null
+    },
+    {
+      "id": "M02",
+      "kind": "memory",
+      "title": "确实没有的经验查询",
+      "fixture": "memory",
+      "request": {
+        "transport": "cli",
+        "command": "recall",
+        "query": "zzqviolethippopotamuszzq",
+        "top_k": 5,
+        "full": false
+      },
+      "facts": {
+        "text_regex": [
+          "没有找到|未找到|无.*记忆"
+        ],
+        "text_not": [
+          "$memory_id"
+        ]
+      },
+      "contract": null
+    },
+    {
+      "id": "M03",
+      "kind": "memory",
+      "title": "锚定源码改变后检索提示复核",
+      "fixture": "memory-changed",
+      "request": {
+        "transport": "mcp",
+        "command": "recall",
+        "query": "锁冲突",
+        "top_k": 5,
+        "full": true
+      },
+      "facts": {
+        "text_all": [
+          "$memory_id"
+        ],
+        "text_regex": [
+          "code_drift|Drift|需复核|已变化"
+        ],
+        "top5_id": "$memory_id"
+      },
+      "contract": null
+    },
+    {
+      "id": "M04",
+      "kind": "memory",
+      "title": "归档经验默认不出现",
+      "fixture": "memory-archived",
+      "request": {
+        "transport": "cli",
+        "command": "recall",
+        "query": "锁冲突",
+        "top_k": 5,
+        "full": false
+      },
+      "facts": {
+        "text_not": [
+          "$memory_id",
+          "锁冲突时先退避"
+        ]
+      },
+      "contract": null
+    },
+    {
+      "id": "T01",
+      "kind": "task",
+      "title": "修改写入入口",
+      "fixture": "task-1",
+      "request": {
+        "transport": "cli",
+        "target": "target.ts",
+        "mode": "impact",
+        "query": "锁冲突",
+        "depth": 1,
+        "budget": 1500,
+        "legacy": [
+          {
+            "command": "overview"
+          },
+          {
+            "command": "impact",
+            "target": "target.ts"
+          },
+          {
+            "command": "note",
+            "action": "get",
+            "target": "target.ts"
+          },
+          {
+            "command": "recall",
+            "query": "锁冲突",
+            "top_k": 5
+          }
+        ],
+        "context": {
+          "command": "context",
+          "target": "target.ts",
+          "mode": "impact",
+          "question": "修改本地事务写入时需要哪些约束和经验？",
+          "depth": 1,
+          "budget": 1500
+        }
+      },
+      "evidence": {
+        "identity": {
+          "text_all": [
+            "$project_id"
+          ]
+        },
+        "redline": {
+          "text_all": [
+            "离线红线"
+          ]
+        },
+        "role": {
+          "text_all": [
+            "本地事务写入入口"
+          ]
+        },
+        "relation": {
+          "text_all": [
+            "entry.ts → target.ts",
+            "第 1 行"
+          ]
+        },
+        "memory": {
+          "text_all": [
+            "$memory_id",
+            "锁冲突时先退避"
+          ]
+        }
+      },
+      "facts": {
+        "text_not": []
+      },
+      "contract": null
+    },
+    {
+      "id": "T02",
+      "kind": "task",
+      "title": "解释入口职责",
+      "fixture": "task-2",
+      "request": {
+        "transport": "cli",
+        "target": "entry.ts",
+        "mode": "explain",
+        "query": "锁冲突",
+        "depth": 1,
+        "budget": 1500,
+        "legacy": [
+          {
+            "command": "overview"
+          },
+          {
+            "command": "explain",
+            "target": "entry.ts"
+          },
+          {
+            "command": "note",
+            "action": "get",
+            "target": "entry.ts"
+          },
+          {
+            "command": "recall",
+            "query": "锁冲突",
+            "top_k": 5
+          }
+        ],
+        "context": {
+          "command": "context",
+          "target": "entry.ts",
+          "mode": "explain",
+          "question": "修改本地事务写入时需要哪些约束和经验？",
+          "depth": 1,
+          "budget": 1500
+        }
+      },
+      "evidence": {
+        "identity": {
+          "text_all": [
+            "$project_id"
+          ]
+        },
+        "redline": {
+          "text_all": [
+            "离线红线"
+          ]
+        },
+        "role": {
+          "text_all": [
+            "本地事务写入入口"
+          ]
+        },
+        "relation": {
+          "text_all": [
+            "entry.ts → target.ts",
+            "第 1 行"
+          ]
+        },
+        "memory": {
+          "text_all": [
+            "$memory_id",
+            "锁冲突时先退避"
+          ]
+        }
+      },
+      "facts": {
+        "text_not": []
+      },
+      "contract": null
+    },
+    {
+      "id": "T03",
+      "kind": "task",
+      "title": "使用方导入已删未刷新",
+      "fixture": "task-3",
+      "request": {
+        "transport": "cli",
+        "target": "target.ts",
+        "mode": "impact",
+        "query": "锁冲突",
+        "depth": 1,
+        "budget": 1500,
+        "legacy": [
+          {
+            "command": "overview"
+          },
+          {
+            "command": "impact",
+            "target": "target.ts"
+          },
+          {
+            "command": "note",
+            "action": "get",
+            "target": "target.ts"
+          },
+          {
+            "command": "recall",
+            "query": "锁冲突",
+            "top_k": 5
+          }
+        ],
+        "context": {
+          "command": "context",
+          "target": "target.ts",
+          "mode": "impact",
+          "question": "修改本地事务写入时需要哪些约束和经验？",
+          "depth": 1,
+          "budget": 1500
+        }
+      },
+      "evidence": {
+        "identity": {
+          "text_all": [
+            "$project_id"
+          ]
+        },
+        "redline": {
+          "text_all": [
+            "离线红线"
+          ]
+        },
+        "role": {
+          "text_all": [
+            "本地事务写入入口"
+          ]
+        },
+        "relation": {
+          "text_all": [
+            "entry.ts → target.ts",
+            "第 1 行"
+          ]
+        },
+        "memory": {
+          "text_all": [
+            "$memory_id",
+            "锁冲突时先退避"
+          ]
+        },
+        "changed_source": {
+          "text_all": [
+            "entry.ts"
+          ],
+          "text_regex": [
+            "已变化|已改变|发生变化|changed"
+          ]
+        }
+      },
+      "facts": {
+        "text_not": []
+      },
+      "contract": null
+    },
+    {
+      "id": "T04",
+      "kind": "task",
+      "title": "目标职责需复核",
+      "fixture": "task-4",
+      "request": {
+        "transport": "cli",
+        "target": "target.ts",
+        "mode": "impact",
+        "query": "锁冲突",
+        "depth": 1,
+        "budget": 1500,
+        "legacy": [
+          {
+            "command": "overview"
+          },
+          {
+            "command": "impact",
+            "target": "target.ts"
+          },
+          {
+            "command": "note",
+            "action": "get",
+            "target": "target.ts"
+          },
+          {
+            "command": "recall",
+            "query": "锁冲突",
+            "top_k": 5
+          }
+        ],
+        "context": {
+          "command": "context",
+          "target": "target.ts",
+          "mode": "impact",
+          "question": "修改本地事务写入时需要哪些约束和经验？",
+          "depth": 1,
+          "budget": 1500
+        }
+      },
+      "evidence": {
+        "identity": {
+          "text_all": [
+            "$project_id"
+          ]
+        },
+        "redline": {
+          "text_all": [
+            "离线红线"
+          ]
+        },
+        "role": {
+          "text_all": [
+            "本地事务写入入口"
+          ]
+        },
+        "relation": {
+          "text_all": [
+            "entry.ts → target.ts",
+            "第 1 行"
+          ]
+        },
+        "memory": {
+          "text_all": [
+            "$memory_id",
+            "锁冲突时先退避"
+          ]
+        },
+        "role_review": {
+          "text_regex": [
+            "需复核|待复核|已变化"
+          ]
+        }
+      },
+      "facts": {
+        "text_not": []
+      },
+      "contract": null
+    },
+    {
+      "id": "T05",
+      "kind": "task",
+      "title": "归档经验不能作依据",
+      "fixture": "task-5",
+      "request": {
+        "transport": "cli",
+        "target": "target.ts",
+        "mode": "impact",
+        "query": "锁冲突",
+        "depth": 1,
+        "budget": 1500,
+        "legacy": [
+          {
+            "command": "overview"
+          },
+          {
+            "command": "impact",
+            "target": "target.ts"
+          },
+          {
+            "command": "note",
+            "action": "get",
+            "target": "target.ts"
+          },
+          {
+            "command": "recall",
+            "query": "锁冲突",
+            "top_k": 5
+          }
+        ],
+        "context": {
+          "command": "context",
+          "target": "target.ts",
+          "mode": "impact",
+          "question": "修改本地事务写入时需要哪些约束和经验？",
+          "depth": 1,
+          "budget": 1500
+        }
+      },
+      "evidence": {
+        "identity": {
+          "text_all": [
+            "$project_id"
+          ]
+        },
+        "redline": {
+          "text_all": [
+            "离线红线"
+          ]
+        },
+        "role": {
+          "text_all": [
+            "本地事务写入入口"
+          ]
+        },
+        "relation": {
+          "text_all": [
+            "entry.ts → target.ts",
+            "第 1 行"
+          ]
+        }
+      },
+      "facts": {
+        "text_not": [
+          "$memory_id"
+        ]
+      },
+      "contract": null
+    },
+    {
+      "id": "T06",
+      "kind": "task",
+      "title": "未确认提议不能作红线",
+      "fixture": "task-6",
+      "request": {
+        "transport": "cli",
+        "target": "target.ts",
+        "mode": "impact",
+        "query": "锁冲突",
+        "depth": 1,
+        "budget": 1500,
+        "legacy": [
+          {
+            "command": "overview"
+          },
+          {
+            "command": "impact",
+            "target": "target.ts"
+          },
+          {
+            "command": "note",
+            "action": "get",
+            "target": "target.ts"
+          },
+          {
+            "command": "recall",
+            "query": "锁冲突",
+            "top_k": 5
+          }
+        ],
+        "context": {
+          "command": "context",
+          "target": "target.ts",
+          "mode": "impact",
+          "question": "修改本地事务写入时需要哪些约束和经验？",
+          "depth": 1,
+          "budget": 1500
+        }
+      },
+      "evidence": {
+        "identity": {
+          "text_all": [
+            "$project_id"
+          ]
+        },
+        "redline": {
+          "text_all": [
+            "离线红线"
+          ]
+        },
+        "role": {
+          "text_all": [
+            "本地事务写入入口"
+          ]
+        },
+        "relation": {
+          "text_all": [
+            "entry.ts → target.ts",
+            "第 1 行"
+          ]
+        },
+        "memory": {
+          "text_all": [
+            "$memory_id",
+            "锁冲突时先退避"
+          ]
+        }
+      },
+      "facts": {
+        "text_not": [
+          "尚待提议不要联网生效"
+        ]
+      },
+      "contract": null
+    },
+    {
+      "id": "B01",
+      "kind": "budget",
+      "title": "必要提示放不下时拒绝并说明最低需求",
+      "fixture": "task-1",
+      "request": {
+        "transport": "cli",
+        "command": "context",
+        "target": "target.ts",
+        "mode": "impact",
+        "question": "修改写入入口",
+        "depth": 1,
+        "budget": 1
+      },
+      "facts": {
+        "expect_error": true,
+        "text_regex": [
+          "(?:最低|至少|最少|minimum|requires?)[^\n]*[0-9]+"
+        ]
+      },
+      "contract": null
+    },
+    {
+      "id": "B02",
+      "kind": "budget",
+      "title": "必要提示放不下时拒绝并说明最低需求",
+      "fixture": "task-1",
+      "request": {
+        "transport": "mcp",
+        "command": "context",
+        "target": "target.ts",
+        "mode": "impact",
+        "question": "修改写入入口",
+        "depth": 1,
+        "budget": 32
+      },
+      "facts": {
+        "expect_error": true,
+        "text_regex": [
+          "(?:最低|至少|最少|minimum|requires?)[^\n]*[0-9]+"
+        ]
+      },
+      "contract": null
+    }
+  ],
+  "rules": {
+    "negative_regex": "没有查到|未查到|未找到|没有找到|不存在(?:任何)?(?:依赖|引用|使用方)|没有(?:任何)?(?:依赖|引用|使用方)",
+    "caveat_regex": "缺口|未覆盖|未确定|截断|省略|不能据此断言|不能判断|不在本次受管范围|尚未.*索引|没有.*快照|不代表当前|新增的文件查不出",
+    "gap_regex": "缺口|未覆盖|未确定|不能判断|无法静态确定|多个候选|不在.*受管|尚未.*索引",
+    "snapshot_caveat_regex": "(?:本次|这次|本).*快照.*(?:受管|范围)|不代表当前|不能据此断言.*(?:当前|没有)|(?:只|仅).*受管"
+  },
+  "notes": [
+    "空范围查询的目标必然 absent。契约在新版本评测之前改过：受管文件为 0 时缺口是 absent 加 empty_scope（原来的短路规则让 empty_scope 永远出不来），S19 相应要求两项。",
+    "静态问题交付文本与 JSON 诊断各发一次，requests/answer_bytes 包括两者；另记 delivery_* 与 diagnostic_*。MCP 握手不算知识请求，另记协议请求和封装成本。",
+    "资源目标文件固定；首次试跑记录其入边数，未按旧版成绩动态挑选。",
+    "此套件不执行下载样本的代码、包管理器、模型或解释器。"
+  ]
+}

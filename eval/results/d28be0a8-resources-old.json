@@ -1,0 +1,3855 @@
+{
+  "schema": 1,
+  "suite": "loom-u2-fixed-v1",
+  "run_id": "ec1ed9008f89404293bec1331b6d57c2",
+  "started_at": "2026-11-25T23:07:39.952464+00:00",
+  "work": "redacted://historical-work/u2/r4-paired",
+  "executable": {
+    "path": "redacted://historical-work/u1/baseline/loom-rev8.exe",
+    "sha256": "c043355f8a5619925aff193c307b74ab749e4decbdf01ac8f5fab676df8b37dd",
+    "version": null,
+    "matches_rev8_baseline": true
+  },
+  "definitions": {
+    "questions_sha256": "6a903edd37a0b789fc52b6468d4dba886e8cacca6ebd7faa1c82c57fdd4f436f",
+    "thresholds_sha256": "5ed16ee1e4f9f74f82cc0dc033b5a34c66c914a74ddaf3558e312c15574f506b"
+  },
+  "harness": {
+    "run_sha256": "52b1db11028c8bfaeb8f5c3418eab92162f76bb3969d6336089d6862cc4e9964",
+    "compare_sha256": "ebe601cf9bcb0b6fdb906175e6413ab7ccadf3195666cb1dcdb59538b40635a9"
+  },
+  "invocation": [
+    "--loom",
+    "redacted://historical-work/u4/final2/loom.exe",
+    "--peer-loom",
+    "redacted://historical-work/u1/baseline/loom-rev8.exe",
+    "--work",
+    "redacted://historical-work/u2/r4-paired",
+    "--out",
+    "redacted://historical-work/u2/r4-resources-new.json",
+    "--peer-out",
+    "redacted://historical-work/u2/r4-resources-old.json",
+    "--only",
+    "resources",
+    "--rounds",
+    "5"
+  ],
+  "environment": {
+    "python": "3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]",
+    "isolated": true,
+    "platform": "Windows-11-10.0.26300-SP0",
+    "logical_cpus": 12,
+    "network": "none; no sample execution; LOOM_* unset",
+    "memory_method": "psapi GetProcessMemoryInfo, 5ms polling plus post-exit handle peak",
+    "bytes": "UTF-8 CLI stdout+stderr or MCP content text; wire separately; no token estimates"
+  },
+  "features": {
+    "context": {
+      "cli": true,
+      "mcp": true
+    }
+  },
+  "discovery": {
+    "path": "redacted://historical-work/u2/r4-paired/raw/discovery.json",
+    "sha256": "986a9900e39be06c8f7a464b2974a55f37fef57ed519886e7142fd44843b3e00"
+  },
+  "sections": {
+    "relations": {
+      "status": "not_run"
+    },
+    "questions": {
+      "status": "not_run"
+    },
+    "resources": {
+      "status": "complete",
+      "trial_only": false,
+      "note": "同一调度、逐轮轮换版本先后；文件缓存不清空",
+      "pair_id": "09137143dcb344a380d278fc5c04d170",
+      "interleaved": true,
+      "rounds": 5,
+      "order": [
+        {
+          "sample": "loom-rust",
+          "round": 1,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "loom-rust",
+          "round": 2,
+          "order": [
+            "peer",
+            "primary"
+          ]
+        },
+        {
+          "sample": "loom-rust",
+          "round": 3,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "loom-rust",
+          "round": 4,
+          "order": [
+            "peer",
+            "primary"
+          ]
+        },
+        {
+          "sample": "loom-rust",
+          "round": 5,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "vue-element-admin",
+          "round": 1,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "vue-element-admin",
+          "round": 2,
+          "order": [
+            "peer",
+            "primary"
+          ]
+        },
+        {
+          "sample": "vue-element-admin",
+          "round": 3,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "vue-element-admin",
+          "round": 4,
+          "order": [
+            "peer",
+            "primary"
+          ]
+        },
+        {
+          "sample": "vue-element-admin",
+          "round": 5,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "oh-memos",
+          "round": 1,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "oh-memos",
+          "round": 2,
+          "order": [
+            "peer",
+            "primary"
+          ]
+        },
+        {
+          "sample": "oh-memos",
+          "round": 3,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        },
+        {
+          "sample": "oh-memos",
+          "round": 4,
+          "order": [
+            "peer",
+            "primary"
+          ]
+        },
+        {
+          "sample": "oh-memos",
+          "round": 5,
+          "order": [
+            "primary",
+            "peer"
+          ]
+        }
+      ],
+      "samples": {
+        "loom-rust": {
+          "operations": {
+            "full": {
+              "ms": {
+                "median": 282.6526999997441,
+                "min": 260.87990001542494,
+                "max": 297.53869998967275,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 11644928,
+                "min": 11587584,
+                "max": 11739136,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "unchanged": {
+              "ms": {
+                "median": 36.42940000281669,
+                "min": 35.185799992177635,
+                "max": 41.9355999911204,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 8667136,
+                "min": 8564736,
+                "max": 8679424,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "one_file": {
+              "ms": {
+                "median": 43.29659999348223,
+                "min": 42.43420000420883,
+                "max": 48.233000008622184,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 9748480,
+                "min": 9719808,
+                "max": 9875456,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "explain": {
+              "ms": {
+                "median": 10.153599985642359,
+                "min": 9.714700019685552,
+                "max": 12.817799986805767,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 7155712,
+                "min": 7135232,
+                "max": 7180288,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "impact": {
+              "ms": {
+                "median": 10.379599989391863,
+                "min": 9.877500007860363,
+                "max": 11.313299997709692,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 7172096,
+                "min": 7163904,
+                "max": 7204864,
+                "rounds": 5,
+                "observations": 5
+              }
+            }
+          },
+          "runs": [
+            {
+              "round": 1,
+              "measurements": {
+                "full": {
+                  "ms": 282.6526999997441,
+                  "peak_working_set_bytes": 11636736,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 80,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 456,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648063
+                  }
+                },
+                "unchanged": {
+                  "ms": 35.185799992177635,
+                  "peak_working_set_bytes": 8667136,
+                  "memory_error": null,
+                  "answer_bytes": 161,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 80,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648063
+                  }
+                },
+                "one_file": {
+                  "ms": 43.29659999348223,
+                  "peak_working_set_bytes": 9875456,
+                  "memory_error": null,
+                  "answer_bytes": 162,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 79,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 39,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648064
+                  }
+                },
+                "explain": {
+                  "ms": 10.153599985642359,
+                  "peak_working_set_bytes": 7135232,
+                  "memory_error": null,
+                  "answer_bytes": 529,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648064,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "target": "crates/loom-core/src/redact.rs",
+                        "kind": "import",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "spelling": "anyhow",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 10.003400006098673,
+                  "peak_working_set_bytes": 7204864,
+                  "memory_error": null,
+                  "answer_bytes": 414,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648064,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity.rs",
+                        "target": "crates/loom-core/src/continuity/text.rs",
+                        "kind": "module",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 2,
+              "measurements": {
+                "full": {
+                  "ms": 297.53869998967275,
+                  "peak_working_set_bytes": 11665408,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 80,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 456,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648064
+                  }
+                },
+                "unchanged": {
+                  "ms": 35.27709998888895,
+                  "peak_working_set_bytes": 8675328,
+                  "memory_error": null,
+                  "answer_bytes": 161,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 80,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648064
+                  }
+                },
+                "one_file": {
+                  "ms": 48.233000008622184,
+                  "peak_working_set_bytes": 9719808,
+                  "memory_error": null,
+                  "answer_bytes": 162,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 79,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 39,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648064
+                  }
+                },
+                "explain": {
+                  "ms": 9.714700019685552,
+                  "peak_working_set_bytes": 7155712,
+                  "memory_error": null,
+                  "answer_bytes": 529,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648064,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "target": "crates/loom-core/src/redact.rs",
+                        "kind": "import",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "spelling": "anyhow",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 9.877500007860363,
+                  "peak_working_set_bytes": 7163904,
+                  "memory_error": null,
+                  "answer_bytes": 414,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648064,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity.rs",
+                        "target": "crates/loom-core/src/continuity/text.rs",
+                        "kind": "module",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 3,
+              "measurements": {
+                "full": {
+                  "ms": 260.87990001542494,
+                  "peak_working_set_bytes": 11644928,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 80,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 456,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648065
+                  }
+                },
+                "unchanged": {
+                  "ms": 36.42940000281669,
+                  "peak_working_set_bytes": 8679424,
+                  "memory_error": null,
+                  "answer_bytes": 161,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 80,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648065
+                  }
+                },
+                "one_file": {
+                  "ms": 42.43420000420883,
+                  "peak_working_set_bytes": 9744384,
+                  "memory_error": null,
+                  "answer_bytes": 162,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 79,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 39,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648066
+                  }
+                },
+                "explain": {
+                  "ms": 10.611700010485947,
+                  "peak_working_set_bytes": 7159808,
+                  "memory_error": null,
+                  "answer_bytes": 529,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648066,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "target": "crates/loom-core/src/redact.rs",
+                        "kind": "import",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "spelling": "anyhow",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 10.672700009308755,
+                  "peak_working_set_bytes": 7172096,
+                  "memory_error": null,
+                  "answer_bytes": 414,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648066,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity.rs",
+                        "target": "crates/loom-core/src/continuity/text.rs",
+                        "kind": "module",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 4,
+              "measurements": {
+                "full": {
+                  "ms": 286.61499998997897,
+                  "peak_working_set_bytes": 11739136,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 80,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 456,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648066
+                  }
+                },
+                "unchanged": {
+                  "ms": 41.9355999911204,
+                  "peak_working_set_bytes": 8572928,
+                  "memory_error": null,
+                  "answer_bytes": 161,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 80,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648066
+                  }
+                },
+                "one_file": {
+                  "ms": 45.48219998832792,
+                  "peak_working_set_bytes": 9748480,
+                  "memory_error": null,
+                  "answer_bytes": 162,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 79,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 39,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648066
+                  }
+                },
+                "explain": {
+                  "ms": 12.817799986805767,
+                  "peak_working_set_bytes": 7180288,
+                  "memory_error": null,
+                  "answer_bytes": 529,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648066,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "target": "crates/loom-core/src/redact.rs",
+                        "kind": "import",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "spelling": "anyhow",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 11.313299997709692,
+                  "peak_working_set_bytes": 7196672,
+                  "memory_error": null,
+                  "answer_bytes": 414,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648066,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity.rs",
+                        "target": "crates/loom-core/src/continuity/text.rs",
+                        "kind": "module",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 5,
+              "measurements": {
+                "full": {
+                  "ms": 269.9801999842748,
+                  "peak_working_set_bytes": 11587584,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 80,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 456,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648067
+                  }
+                },
+                "unchanged": {
+                  "ms": 38.612799980910495,
+                  "peak_working_set_bytes": 8564736,
+                  "memory_error": null,
+                  "answer_bytes": 161,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 80,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648067
+                  }
+                },
+                "one_file": {
+                  "ms": 42.94119999394752,
+                  "peak_working_set_bytes": 9773056,
+                  "memory_error": null,
+                  "answer_bytes": 162,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 79,
+                    "removed": 0,
+                    "seen": 80,
+                    "uncovered": 0,
+                    "relinked": 39,
+                    "relations": 82,
+                    "unresolved": 374,
+                    "finished_at": 1795648068
+                  }
+                },
+                "explain": {
+                  "ms": 10.144300002139062,
+                  "peak_working_set_bytes": 7139328,
+                  "memory_error": null,
+                  "answer_bytes": 529,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648068,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "target": "crates/loom-core/src/redact.rs",
+                        "kind": "import",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "crates/loom-core/src/continuity/text.rs",
+                        "spelling": "anyhow",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 10.379599989391863,
+                  "peak_working_set_bytes": 7168000,
+                  "memory_error": null,
+                  "answer_bytes": 414,
+                  "report": {
+                    "target": "crates/loom-core/src/continuity/text.rs",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648068,
+                    "coverage": {
+                      "managed_files": 80,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 374
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "crates/loom-core/src/continuity.rs",
+                        "target": "crates/loom-core/src/continuity/text.rs",
+                        "kind": "module",
+                        "line": 5,
+                        "confidence": "exact",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            }
+          ],
+          "fixed_target": "crates/loom-core/src/continuity/text.rs",
+          "target_relation_counts": {
+            "full": 82,
+            "explain": 1,
+            "impact": 1
+          }
+        },
+        "vue-element-admin": {
+          "operations": {
+            "full": {
+              "ms": {
+                "median": 213.25299999443814,
+                "min": 210.97469999222085,
+                "max": 264.5077999914065,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 10563584,
+                "min": 10506240,
+                "max": 10670080,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "unchanged": {
+              "ms": {
+                "median": 81.44700000411831,
+                "min": 77.64250002219342,
+                "max": 153.39599997969344,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 8896512,
+                "min": 8851456,
+                "max": 8941568,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "one_file": {
+              "ms": {
+                "median": 95.01449999515899,
+                "min": 86.77799999713898,
+                "max": 99.78119999868795,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 9510912,
+                "min": 9424896,
+                "max": 9629696,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "explain": {
+              "ms": {
+                "median": 11.246000009123236,
+                "min": 10.464100021636114,
+                "max": 26.633700006641448,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 7159808,
+                "min": 7118848,
+                "max": 7188480,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "impact": {
+              "ms": {
+                "median": 11.966599995503202,
+                "min": 11.294800002360716,
+                "max": 12.525700003607199,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 7155712,
+                "min": 7143424,
+                "max": 7176192,
+                "rounds": 5,
+                "observations": 5
+              }
+            }
+          },
+          "runs": [
+            {
+              "round": 1,
+              "measurements": {
+                "full": {
+                  "ms": 213.25299999443814,
+                  "peak_working_set_bytes": 10506240,
+                  "memory_error": null,
+                  "answer_bytes": 165,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 221,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 379,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648069
+                  }
+                },
+                "unchanged": {
+                  "ms": 79.8752999980934,
+                  "peak_working_set_bytes": 8851456,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 221,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648069
+                  }
+                },
+                "one_file": {
+                  "ms": 95.96420000889339,
+                  "peak_working_set_bytes": 9424896,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 220,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 6,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648069
+                  }
+                },
+                "explain": {
+                  "ms": 26.633700006641448,
+                  "peak_working_set_bytes": 7118848,
+                  "memory_error": null,
+                  "answer_bytes": 859,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648069,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "target": "mock/index.js",
+                        "kind": "require",
+                        "line": 11,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chokidar",
+                        "line": 1,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "body-parser",
+                        "line": 2,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chalk",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "path",
+                        "line": 4,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "mockjs",
+                        "line": 5,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 11.294800002360716,
+                  "peak_working_set_bytes": 7155712,
+                  "memory_error": null,
+                  "answer_bytes": 356,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648069,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "vue.config.js",
+                        "target": "mock/mock-server.js",
+                        "kind": "require",
+                        "line": 39,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 2,
+              "measurements": {
+                "full": {
+                  "ms": 264.5077999914065,
+                  "peak_working_set_bytes": 10559488,
+                  "memory_error": null,
+                  "answer_bytes": 165,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 221,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 379,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648070
+                  }
+                },
+                "unchanged": {
+                  "ms": 153.39599997969344,
+                  "peak_working_set_bytes": 8941568,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 221,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648070
+                  }
+                },
+                "one_file": {
+                  "ms": 99.78119999868795,
+                  "peak_working_set_bytes": 9433088,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 220,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 6,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648070
+                  }
+                },
+                "explain": {
+                  "ms": 12.745100015308708,
+                  "peak_working_set_bytes": 7184384,
+                  "memory_error": null,
+                  "answer_bytes": 859,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648070,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "target": "mock/index.js",
+                        "kind": "require",
+                        "line": 11,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chokidar",
+                        "line": 1,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "body-parser",
+                        "line": 2,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chalk",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "path",
+                        "line": 4,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "mockjs",
+                        "line": 5,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 12.525700003607199,
+                  "peak_working_set_bytes": 7176192,
+                  "memory_error": null,
+                  "answer_bytes": 356,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648070,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "vue.config.js",
+                        "target": "mock/mock-server.js",
+                        "kind": "require",
+                        "line": 39,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 3,
+              "measurements": {
+                "full": {
+                  "ms": 211.49049999075942,
+                  "peak_working_set_bytes": 10563584,
+                  "memory_error": null,
+                  "answer_bytes": 165,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 221,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 379,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648072
+                  }
+                },
+                "unchanged": {
+                  "ms": 81.44700000411831,
+                  "peak_working_set_bytes": 8867840,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 221,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648072
+                  }
+                },
+                "one_file": {
+                  "ms": 95.01449999515899,
+                  "peak_working_set_bytes": 9629696,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 220,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 6,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648072
+                  }
+                },
+                "explain": {
+                  "ms": 11.246000009123236,
+                  "peak_working_set_bytes": 7159808,
+                  "memory_error": null,
+                  "answer_bytes": 859,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648072,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "target": "mock/index.js",
+                        "kind": "require",
+                        "line": 11,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chokidar",
+                        "line": 1,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "body-parser",
+                        "line": 2,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chalk",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "path",
+                        "line": 4,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "mockjs",
+                        "line": 5,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 11.737099994206801,
+                  "peak_working_set_bytes": 7155712,
+                  "memory_error": null,
+                  "answer_bytes": 356,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648072,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "vue.config.js",
+                        "target": "mock/mock-server.js",
+                        "kind": "require",
+                        "line": 39,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 4,
+              "measurements": {
+                "full": {
+                  "ms": 232.3311000072863,
+                  "peak_working_set_bytes": 10641408,
+                  "memory_error": null,
+                  "answer_bytes": 165,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 221,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 379,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648073
+                  }
+                },
+                "unchanged": {
+                  "ms": 111.12980000325479,
+                  "peak_working_set_bytes": 8896512,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 221,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648073
+                  }
+                },
+                "one_file": {
+                  "ms": 86.77799999713898,
+                  "peak_working_set_bytes": 9527296,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 220,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 6,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648073
+                  }
+                },
+                "explain": {
+                  "ms": 10.464100021636114,
+                  "peak_working_set_bytes": 7118848,
+                  "memory_error": null,
+                  "answer_bytes": 859,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648073,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "target": "mock/index.js",
+                        "kind": "require",
+                        "line": 11,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chokidar",
+                        "line": 1,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "body-parser",
+                        "line": 2,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chalk",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "path",
+                        "line": 4,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "mockjs",
+                        "line": 5,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 12.454200012143701,
+                  "peak_working_set_bytes": 7163904,
+                  "memory_error": null,
+                  "answer_bytes": 356,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648073,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "vue.config.js",
+                        "target": "mock/mock-server.js",
+                        "kind": "require",
+                        "line": 39,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 5,
+              "measurements": {
+                "full": {
+                  "ms": 210.97469999222085,
+                  "peak_working_set_bytes": 10670080,
+                  "memory_error": null,
+                  "answer_bytes": 165,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 221,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 379,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648075
+                  }
+                },
+                "unchanged": {
+                  "ms": 77.64250002219342,
+                  "peak_working_set_bytes": 8896512,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 221,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 0,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648075
+                  }
+                },
+                "one_file": {
+                  "ms": 91.99399998760782,
+                  "peak_working_set_bytes": 9510912,
+                  "memory_error": null,
+                  "answer_bytes": 163,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 220,
+                    "removed": 0,
+                    "seen": 221,
+                    "uncovered": 0,
+                    "relinked": 6,
+                    "relations": 280,
+                    "unresolved": 99,
+                    "finished_at": 1795648075
+                  }
+                },
+                "explain": {
+                  "ms": 10.942199995042756,
+                  "peak_working_set_bytes": 7188480,
+                  "memory_error": null,
+                  "answer_bytes": 859,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648075,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "target": "mock/index.js",
+                        "kind": "require",
+                        "line": 11,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chokidar",
+                        "line": 1,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "body-parser",
+                        "line": 2,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "chalk",
+                        "line": 3,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "path",
+                        "line": 4,
+                        "state": "unsupported",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mock/mock-server.js",
+                        "spelling": "mockjs",
+                        "line": 5,
+                        "state": "unsupported",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 11.966599995503202,
+                  "peak_working_set_bytes": 7143424,
+                  "memory_error": null,
+                  "answer_bytes": 356,
+                  "report": {
+                    "target": "mock/mock-server.js",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648075,
+                    "coverage": {
+                      "managed_files": 221,
+                      "uncovered_files": 0,
+                      "unresolved_refs": 99
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "vue.config.js",
+                        "target": "mock/mock-server.js",
+                        "kind": "require",
+                        "line": 39,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            }
+          ],
+          "fixed_target": "mock/mock-server.js",
+          "target_relation_counts": {
+            "full": 280,
+            "explain": 1,
+            "impact": 1
+          }
+        },
+        "oh-memos": {
+          "operations": {
+            "full": {
+              "ms": {
+                "median": 2143.6605000053532,
+                "min": 2081.808999995701,
+                "max": 2721.374700020533,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 20332544,
+                "min": 20295680,
+                "max": 20369408,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "unchanged": {
+              "ms": {
+                "median": 201.5998999995645,
+                "min": 181.92909998469986,
+                "max": 228.8231000129599,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 10366976,
+                "min": 10309632,
+                "max": 10526720,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "one_file": {
+              "ms": {
+                "median": 199.9243999889586,
+                "min": 192.59329998749308,
+                "max": 232.1906000142917,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 10395648,
+                "min": 10285056,
+                "max": 10469376,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "explain": {
+              "ms": {
+                "median": 10.152300004847348,
+                "min": 9.71189999836497,
+                "max": 13.68259999435395,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 7151616,
+                "min": 7151616,
+                "max": 7184384,
+                "rounds": 5,
+                "observations": 5
+              }
+            },
+            "impact": {
+              "ms": {
+                "median": 12.08089999272488,
+                "min": 10.250000021187589,
+                "max": 12.821100011933595,
+                "rounds": 5,
+                "observations": 5
+              },
+              "peak_working_set_bytes": {
+                "median": 7172096,
+                "min": 7163904,
+                "max": 7196672,
+                "rounds": 5,
+                "observations": 5
+              }
+            }
+          },
+          "runs": [
+            {
+              "round": 1,
+              "measurements": {
+                "full": {
+                  "ms": 2081.808999995701,
+                  "peak_working_set_bytes": 20295680,
+                  "memory_error": null,
+                  "answer_bytes": 169,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 613,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 3823,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648081
+                  }
+                },
+                "unchanged": {
+                  "ms": 228.8231000129599,
+                  "peak_working_set_bytes": 10526720,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 619,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 0,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648081
+                  }
+                },
+                "one_file": {
+                  "ms": 232.1906000142917,
+                  "peak_working_set_bytes": 10395648,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 618,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 8,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648081
+                  }
+                },
+                "explain": {
+                  "ms": 13.68259999435395,
+                  "peak_working_set_bytes": 7151616,
+                  "memory_error": null,
+                  "answer_bytes": 1543,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648081,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [
+                      {
+                        "name": "get_semester_dates",
+                        "kind": "function",
+                        "line": 28
+                      },
+                      {
+                        "name": "get_week_dates",
+                        "kind": "function",
+                        "line": 56
+                      },
+                      {
+                        "name": "format_project_timeline",
+                        "kind": "function",
+                        "line": 64
+                      },
+                      {
+                        "name": "format_calendar_output",
+                        "kind": "function",
+                        "line": 118
+                      },
+                      {
+                        "name": "handle_memos_calendar",
+                        "kind": "function",
+                        "line": 216
+                      }
+                    ],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/api_client.py",
+                        "kind": "import",
+                        "line": 16,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/config.py",
+                        "kind": "import",
+                        "line": 17,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/cube_manager.py",
+                        "kind": "import",
+                        "line": 18,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/handlers/utils.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "datetime",
+                        "line": 11,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "typing",
+                        "line": 12,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "httpx",
+                        "line": 14,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "mcp.types",
+                        "line": 19,
+                        "state": "missing",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 11.656099988613278,
+                  "peak_working_set_bytes": 7172096,
+                  "memory_error": null,
+                  "answer_bytes": 399,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648081,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/__init__.py",
+                        "target": "mcp-server/handlers/calendar.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 2,
+              "measurements": {
+                "full": {
+                  "ms": 2143.6605000053532,
+                  "peak_working_set_bytes": 20353024,
+                  "memory_error": null,
+                  "answer_bytes": 169,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 613,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 3823,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648084
+                  }
+                },
+                "unchanged": {
+                  "ms": 200.06890001241118,
+                  "peak_working_set_bytes": 10313728,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 619,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 0,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648084
+                  }
+                },
+                "one_file": {
+                  "ms": 194.49739999254234,
+                  "peak_working_set_bytes": 10383360,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 618,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 8,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648084
+                  }
+                },
+                "explain": {
+                  "ms": 10.671299998648465,
+                  "peak_working_set_bytes": 7184384,
+                  "memory_error": null,
+                  "answer_bytes": 1543,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648084,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [
+                      {
+                        "name": "get_semester_dates",
+                        "kind": "function",
+                        "line": 28
+                      },
+                      {
+                        "name": "get_week_dates",
+                        "kind": "function",
+                        "line": 56
+                      },
+                      {
+                        "name": "format_project_timeline",
+                        "kind": "function",
+                        "line": 64
+                      },
+                      {
+                        "name": "format_calendar_output",
+                        "kind": "function",
+                        "line": 118
+                      },
+                      {
+                        "name": "handle_memos_calendar",
+                        "kind": "function",
+                        "line": 216
+                      }
+                    ],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/api_client.py",
+                        "kind": "import",
+                        "line": 16,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/config.py",
+                        "kind": "import",
+                        "line": 17,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/cube_manager.py",
+                        "kind": "import",
+                        "line": 18,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/handlers/utils.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "datetime",
+                        "line": 11,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "typing",
+                        "line": 12,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "httpx",
+                        "line": 14,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "mcp.types",
+                        "line": 19,
+                        "state": "missing",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 12.140799983171746,
+                  "peak_working_set_bytes": 7176192,
+                  "memory_error": null,
+                  "answer_bytes": 399,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648084,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/__init__.py",
+                        "target": "mcp-server/handlers/calendar.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 3,
+              "measurements": {
+                "full": {
+                  "ms": 2721.374700020533,
+                  "peak_working_set_bytes": 20320256,
+                  "memory_error": null,
+                  "answer_bytes": 169,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 613,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 3823,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648094
+                  }
+                },
+                "unchanged": {
+                  "ms": 206.0256999975536,
+                  "peak_working_set_bytes": 10371072,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 619,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 0,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648095
+                  }
+                },
+                "one_file": {
+                  "ms": 199.9243999889586,
+                  "peak_working_set_bytes": 10285056,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 618,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 8,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648095
+                  }
+                },
+                "explain": {
+                  "ms": 10.152300004847348,
+                  "peak_working_set_bytes": 7151616,
+                  "memory_error": null,
+                  "answer_bytes": 1543,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648095,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [
+                      {
+                        "name": "get_semester_dates",
+                        "kind": "function",
+                        "line": 28
+                      },
+                      {
+                        "name": "get_week_dates",
+                        "kind": "function",
+                        "line": 56
+                      },
+                      {
+                        "name": "format_project_timeline",
+                        "kind": "function",
+                        "line": 64
+                      },
+                      {
+                        "name": "format_calendar_output",
+                        "kind": "function",
+                        "line": 118
+                      },
+                      {
+                        "name": "handle_memos_calendar",
+                        "kind": "function",
+                        "line": 216
+                      }
+                    ],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/api_client.py",
+                        "kind": "import",
+                        "line": 16,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/config.py",
+                        "kind": "import",
+                        "line": 17,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/cube_manager.py",
+                        "kind": "import",
+                        "line": 18,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/handlers/utils.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "datetime",
+                        "line": 11,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "typing",
+                        "line": 12,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "httpx",
+                        "line": 14,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "mcp.types",
+                        "line": 19,
+                        "state": "missing",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 12.821100011933595,
+                  "peak_working_set_bytes": 7168000,
+                  "memory_error": null,
+                  "answer_bytes": 399,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648095,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/__init__.py",
+                        "target": "mcp-server/handlers/calendar.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 4,
+              "measurements": {
+                "full": {
+                  "ms": 2095.412099995883,
+                  "peak_working_set_bytes": 20369408,
+                  "memory_error": null,
+                  "answer_bytes": 169,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 613,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 3823,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648097
+                  }
+                },
+                "unchanged": {
+                  "ms": 181.92909998469986,
+                  "peak_working_set_bytes": 10309632,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 619,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 0,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648098
+                  }
+                },
+                "one_file": {
+                  "ms": 192.59329998749308,
+                  "peak_working_set_bytes": 10407936,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 618,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 8,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648098
+                  }
+                },
+                "explain": {
+                  "ms": 9.71189999836497,
+                  "peak_working_set_bytes": 7151616,
+                  "memory_error": null,
+                  "answer_bytes": 1543,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648098,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [
+                      {
+                        "name": "get_semester_dates",
+                        "kind": "function",
+                        "line": 28
+                      },
+                      {
+                        "name": "get_week_dates",
+                        "kind": "function",
+                        "line": 56
+                      },
+                      {
+                        "name": "format_project_timeline",
+                        "kind": "function",
+                        "line": 64
+                      },
+                      {
+                        "name": "format_calendar_output",
+                        "kind": "function",
+                        "line": 118
+                      },
+                      {
+                        "name": "handle_memos_calendar",
+                        "kind": "function",
+                        "line": 216
+                      }
+                    ],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/api_client.py",
+                        "kind": "import",
+                        "line": 16,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/config.py",
+                        "kind": "import",
+                        "line": 17,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/cube_manager.py",
+                        "kind": "import",
+                        "line": 18,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/handlers/utils.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "datetime",
+                        "line": 11,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "typing",
+                        "line": 12,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "httpx",
+                        "line": 14,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "mcp.types",
+                        "line": 19,
+                        "state": "missing",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 10.250000021187589,
+                  "peak_working_set_bytes": 7163904,
+                  "memory_error": null,
+                  "answer_bytes": 399,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648098,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/__init__.py",
+                        "target": "mcp-server/handlers/calendar.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            },
+            {
+              "round": 5,
+              "measurements": {
+                "full": {
+                  "ms": 2197.3754000209738,
+                  "peak_working_set_bytes": 20332544,
+                  "memory_error": null,
+                  "answer_bytes": 169,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 613,
+                    "unchanged": 0,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 3823,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648107
+                  }
+                },
+                "unchanged": {
+                  "ms": 201.5998999995645,
+                  "peak_working_set_bytes": 10366976,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 0,
+                    "unchanged": 619,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 0,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648107
+                  }
+                },
+                "one_file": {
+                  "ms": 226.6611999948509,
+                  "peak_working_set_bytes": 10469376,
+                  "memory_error": null,
+                  "answer_bytes": 166,
+                  "report": {
+                    "scope": "git",
+                    "withheld": 0,
+                    "parsed": 1,
+                    "unchanged": 618,
+                    "removed": 0,
+                    "seen": 619,
+                    "uncovered": 8,
+                    "relinked": 8,
+                    "relations": 1897,
+                    "unresolved": 1799,
+                    "finished_at": 1795648108
+                  }
+                },
+                "explain": {
+                  "ms": 9.941900003468618,
+                  "peak_working_set_bytes": 7176192,
+                  "memory_error": null,
+                  "answer_bytes": 1543,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "outgoing",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648108,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [
+                      {
+                        "name": "get_semester_dates",
+                        "kind": "function",
+                        "line": 28
+                      },
+                      {
+                        "name": "get_week_dates",
+                        "kind": "function",
+                        "line": 56
+                      },
+                      {
+                        "name": "format_project_timeline",
+                        "kind": "function",
+                        "line": 64
+                      },
+                      {
+                        "name": "format_calendar_output",
+                        "kind": "function",
+                        "line": 118
+                      },
+                      {
+                        "name": "handle_memos_calendar",
+                        "kind": "function",
+                        "line": 216
+                      }
+                    ],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/api_client.py",
+                        "kind": "import",
+                        "line": 16,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/config.py",
+                        "kind": "import",
+                        "line": 17,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/cube_manager.py",
+                        "kind": "import",
+                        "line": 18,
+                        "confidence": "likely",
+                        "hop": 1
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "target": "mcp-server/handlers/utils.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "datetime",
+                        "line": 11,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "typing",
+                        "line": 12,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "httpx",
+                        "line": 14,
+                        "state": "missing",
+                        "candidates": []
+                      },
+                      {
+                        "source": "mcp-server/handlers/calendar.py",
+                        "spelling": "mcp.types",
+                        "line": 19,
+                        "state": "missing",
+                        "candidates": []
+                      }
+                    ],
+                    "truncated": false
+                  }
+                },
+                "impact": {
+                  "ms": 12.08089999272488,
+                  "peak_working_set_bytes": 7196672,
+                  "memory_error": null,
+                  "answer_bytes": 399,
+                  "report": {
+                    "target": "mcp-server/handlers/calendar.py",
+                    "direction": "incoming",
+                    "depth": 1,
+                    "status": "indexed",
+                    "snapshot_at": 1795648108,
+                    "coverage": {
+                      "managed_files": 619,
+                      "uncovered_files": 8,
+                      "unresolved_refs": 1799
+                    },
+                    "symbols": [],
+                    "relations": [
+                      {
+                        "source": "mcp-server/handlers/__init__.py",
+                        "target": "mcp-server/handlers/calendar.py",
+                        "kind": "import",
+                        "line": 21,
+                        "confidence": "likely",
+                        "hop": 1
+                      }
+                    ],
+                    "issues": [],
+                    "truncated": false
+                  }
+                }
+              }
+            }
+          ],
+          "fixed_target": "mcp-server/handlers/calendar.py",
+          "target_relation_counts": {
+            "full": 1897,
+            "explain": 4,
+            "impact": 1
+          }
+        }
+      },
+      "idle": [
+        {
+          "working_set_bytes": 9879552,
+          "peak_working_set_bytes": 9949184,
+          "sample": "loom-rust",
+          "idle_seconds": 30.000470500002848,
+          "before_idle": {
+            "working_set_bytes": 9932800,
+            "peak_working_set_bytes": 9932800
+          },
+          "knowledge_requests": 4,
+          "answers": [
+            {
+              "transport": "mcp",
+              "tool": "overview",
+              "arguments": {},
+              "error": false,
+              "returncode": null,
+              "text": "项目：idle · 标识=01M8AFGBBWYQ1XY9SPFJTW7B4F · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/loom-rust/peer/idle\n目标：尚未确认。\n快照：01M8AFGBNRWT1MQ9EC9Z1KXDJ0",
+              "stderr": "",
+              "stdout_bytes": 215,
+              "stderr_bytes": 0,
+              "answer_bytes": 215,
+              "wire_bytes": 322,
+              "ms": 7.686700002523139,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 2,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "项目：idle · 标识=01M8AFGBBWYQ1XY9SPFJTW7B4F · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/loom-rust/peer/idle\n目标：尚未确认。\n快照：01M8AFGBNRWT1MQ9EC9Z1KXDJ0"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "explain",
+              "arguments": {
+                "target": "crates/loom-core/src/continuity/text.rs"
+              },
+              "error": false,
+              "returncode": null,
+              "text": "crates/loom-core/src/continuity/text.rs · 依赖 · 已分析\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\ncrates/loom-core/src/continuity/text.rs → crates/loom-core/src/redact.rs · 第 5 行 · 静态确定 · 第 1 跳\ncrates/loom-core/src/continuity/text.rs:3 · anyhow · 无法静态确定\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\n",
+              "stderr": "",
+              "stdout_bytes": 456,
+              "stderr_bytes": 0,
+              "answer_bytes": 456,
+              "wire_bytes": 551,
+              "ms": 1.7382999940309674,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 3,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "crates/loom-core/src/continuity/text.rs · 依赖 · 已分析\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\ncrates/loom-core/src/continuity/text.rs → crates/loom-core/src/redact.rs · 第 5 行 · 静态确定 · 第 1 跳\ncrates/loom-core/src/continuity/text.rs:3 · anyhow · 无法静态确定\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\n"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "impact",
+              "arguments": {
+                "target": "crates/loom-core/src/continuity/text.rs"
+              },
+              "error": false,
+              "returncode": null,
+              "text": "crates/loom-core/src/continuity/text.rs · 被引用 · 已分析\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\ncrates/loom-core/src/continuity.rs → crates/loom-core/src/continuity/text.rs · 第 5 行 · 静态确定 · 第 1 跳\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\n",
+              "stderr": "",
+              "stdout_bytes": 389,
+              "stderr_bytes": 0,
+              "answer_bytes": 389,
+              "wire_bytes": 483,
+              "ms": 1.4907000004313886,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 4,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "crates/loom-core/src/continuity/text.rs · 被引用 · 已分析\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\ncrates/loom-core/src/continuity.rs → crates/loom-core/src/continuity/text.rs · 第 5 行 · 静态确定 · 第 1 跳\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\n"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "recall",
+              "arguments": {
+                "query": "fixed-eval-no-match",
+                "top_k": 5
+              },
+              "error": false,
+              "returncode": null,
+              "text": "没有找到相关记忆。",
+              "stderr": "",
+              "stdout_bytes": 27,
+              "stderr_bytes": 0,
+              "answer_bytes": 27,
+              "wire_bytes": 117,
+              "ms": 0.8855000196490437,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 5,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "没有找到相关记忆。"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            }
+          ],
+          "session": {
+            "returncode": 0,
+            "stderr": "",
+            "protocol_requests": 5,
+            "protocol_response_bytes": 1615,
+            "transcript": [
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "initialize",
+                  "params": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {},
+                    "clientInfo": {
+                      "name": "loom-fixed-eval",
+                      "version": "1"
+                    }
+                  },
+                  "id": 1
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 1,
+                  "result": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {
+                      "tools": {}
+                    },
+                    "serverInfo": {
+                      "name": "loom",
+                      "version": "0.1.0"
+                    }
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{}},\"serverInfo\":{\"name\":\"loom\",\"version\":\"0.1.0\"}}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "notifications/initialized"
+                }
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "overview",
+                    "arguments": {}
+                  },
+                  "id": 2
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 2,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "项目：idle · 标识=01M8AFGBBWYQ1XY9SPFJTW7B4F · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/loom-rust/peer/idle\n目标：尚未确认。\n快照：01M8AFGBNRWT1MQ9EC9Z1KXDJ0"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"项目：idle · 标识=01M8AFGBBWYQ1XY9SPFJTW7B4F · 根=\\\\\\\\?\\\\redacted://historical-work/u2/r4-paired/resources/loom-rust/peer/idle/n目标：尚未确认。/n快照：01M8AFGBNRWT1MQ9EC9Z1KXDJ0\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "explain",
+                    "arguments": {
+                      "target": "crates/loom-core/src/continuity/text.rs"
+                    }
+                  },
+                  "id": 3
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 3,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "crates/loom-core/src/continuity/text.rs · 依赖 · 已分析\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\ncrates/loom-core/src/continuity/text.rs → crates/loom-core/src/redact.rs · 第 5 行 · 静态确定 · 第 1 跳\ncrates/loom-core/src/continuity/text.rs:3 · anyhow · 无法静态确定\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\n"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":3,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"crates/loom-core/src/continuity/text.rs · 依赖 · 已分析\\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\\ncrates/loom-core/src/continuity/text.rs → crates/loom-core/src/redact.rs · 第 5 行 · 静态确定 · 第 1 跳\\ncrates/loom-core/src/continuity/text.rs:3 · anyhow · 无法静态确定\\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\\n\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "impact",
+                    "arguments": {
+                      "target": "crates/loom-core/src/continuity/text.rs"
+                    }
+                  },
+                  "id": 4
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 4,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "crates/loom-core/src/continuity/text.rs · 被引用 · 已分析\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\ncrates/loom-core/src/continuity.rs → crates/loom-core/src/continuity/text.rs · 第 5 行 · 静态确定 · 第 1 跳\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\n"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":4,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"crates/loom-core/src/continuity/text.rs · 被引用 · 已分析\\n结构快照 1795648138，深度 1。箭头始终从使用方向被使用方，行号在使用方。\\ncrates/loom-core/src/continuity.rs → crates/loom-core/src/continuity/text.rs · 第 5 行 · 静态确定 · 第 1 跳\\n全项目有 0 个文件未覆盖，374 处引用未确定；不能据此断言没有其他影响。\\n\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "recall",
+                    "arguments": {
+                      "query": "fixed-eval-no-match",
+                      "top_k": 5
+                    }
+                  },
+                  "id": 5
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 5,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "没有找到相关记忆。"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":5,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"没有找到相关记忆。\"}],\"isError\":false}}\n"
+              }
+            ]
+          }
+        },
+        {
+          "working_set_bytes": 9875456,
+          "peak_working_set_bytes": 9945088,
+          "sample": "vue-element-admin",
+          "idle_seconds": 30.000458499998786,
+          "before_idle": {
+            "working_set_bytes": 9928704,
+            "peak_working_set_bytes": 9928704
+          },
+          "knowledge_requests": 4,
+          "answers": [
+            {
+              "transport": "mcp",
+              "tool": "overview",
+              "arguments": {},
+              "error": false,
+              "returncode": null,
+              "text": "项目：idle · 标识=01M8AFJ73TBMCWBETVABSZBDJT · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/vue-element-admin/peer/idle\n目标：尚未确认。\n快照：01M8AFJ7BBKD7F0KR52Q5TRD1S",
+              "stderr": "",
+              "stdout_bytes": 223,
+              "stderr_bytes": 0,
+              "answer_bytes": 223,
+              "wire_bytes": 330,
+              "ms": 3.312300017569214,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 2,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "项目：idle · 标识=01M8AFJ73TBMCWBETVABSZBDJT · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/vue-element-admin/peer/idle\n目标：尚未确认。\n快照：01M8AFJ7BBKD7F0KR52Q5TRD1S"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "explain",
+              "arguments": {
+                "target": "mock/mock-server.js"
+              },
+              "error": false,
+              "returncode": null,
+              "text": "mock/mock-server.js · 依赖 · 已分析\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmock/mock-server.js → mock/index.js · 第 11 行 · 可能 · 第 1 跳\nmock/mock-server.js:1 · chokidar · 无法静态确定\nmock/mock-server.js:2 · body-parser · 无法静态确定\nmock/mock-server.js:3 · chalk · 无法静态确定\nmock/mock-server.js:4 · path · 无法静态确定\nmock/mock-server.js:5 · mockjs · 无法静态确定\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\n",
+              "stderr": "",
+              "stdout_bytes": 593,
+              "stderr_bytes": 0,
+              "answer_bytes": 593,
+              "wire_bytes": 692,
+              "ms": 1.3020999904256314,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 3,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mock/mock-server.js · 依赖 · 已分析\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmock/mock-server.js → mock/index.js · 第 11 行 · 可能 · 第 1 跳\nmock/mock-server.js:1 · chokidar · 无法静态确定\nmock/mock-server.js:2 · body-parser · 无法静态确定\nmock/mock-server.js:3 · chalk · 无法静态确定\nmock/mock-server.js:4 · path · 无法静态确定\nmock/mock-server.js:5 · mockjs · 无法静态确定\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\n"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "impact",
+              "arguments": {
+                "target": "mock/mock-server.js"
+              },
+              "error": false,
+              "returncode": null,
+              "text": "mock/mock-server.js · 被引用 · 已分析\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nvue.config.js → mock/mock-server.js · 第 39 行 · 可能 · 第 1 跳\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\n",
+              "stderr": "",
+              "stdout_bytes": 322,
+              "stderr_bytes": 0,
+              "answer_bytes": 322,
+              "wire_bytes": 416,
+              "ms": 1.259700016817078,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 4,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mock/mock-server.js · 被引用 · 已分析\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nvue.config.js → mock/mock-server.js · 第 39 行 · 可能 · 第 1 跳\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\n"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "recall",
+              "arguments": {
+                "query": "fixed-eval-no-match",
+                "top_k": 5
+              },
+              "error": false,
+              "returncode": null,
+              "text": "没有找到相关记忆。",
+              "stderr": "",
+              "stdout_bytes": 27,
+              "stderr_bytes": 0,
+              "answer_bytes": 27,
+              "wire_bytes": 117,
+              "ms": 0.4158999945502728,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 5,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "没有找到相关记忆。"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            }
+          ],
+          "session": {
+            "returncode": 0,
+            "stderr": "",
+            "protocol_requests": 5,
+            "protocol_response_bytes": 1697,
+            "transcript": [
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "initialize",
+                  "params": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {},
+                    "clientInfo": {
+                      "name": "loom-fixed-eval",
+                      "version": "1"
+                    }
+                  },
+                  "id": 1
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 1,
+                  "result": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {
+                      "tools": {}
+                    },
+                    "serverInfo": {
+                      "name": "loom",
+                      "version": "0.1.0"
+                    }
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{}},\"serverInfo\":{\"name\":\"loom\",\"version\":\"0.1.0\"}}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "notifications/initialized"
+                }
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "overview",
+                    "arguments": {}
+                  },
+                  "id": 2
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 2,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "项目：idle · 标识=01M8AFJ73TBMCWBETVABSZBDJT · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/vue-element-admin/peer/idle\n目标：尚未确认。\n快照：01M8AFJ7BBKD7F0KR52Q5TRD1S"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"项目：idle · 标识=01M8AFJ73TBMCWBETVABSZBDJT · 根=\\\\\\\\?\\\\redacted://historical-work/u2/r4-paired/resources/vue-element-admin/peer/idle/n目标：尚未确认。/n快照：01M8AFJ7BBKD7F0KR52Q5TRD1S\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "explain",
+                    "arguments": {
+                      "target": "mock/mock-server.js"
+                    }
+                  },
+                  "id": 3
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 3,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "mock/mock-server.js · 依赖 · 已分析\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmock/mock-server.js → mock/index.js · 第 11 行 · 可能 · 第 1 跳\nmock/mock-server.js:1 · chokidar · 无法静态确定\nmock/mock-server.js:2 · body-parser · 无法静态确定\nmock/mock-server.js:3 · chalk · 无法静态确定\nmock/mock-server.js:4 · path · 无法静态确定\nmock/mock-server.js:5 · mockjs · 无法静态确定\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\n"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":3,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"mock/mock-server.js · 依赖 · 已分析\\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\\nmock/mock-server.js → mock/index.js · 第 11 行 · 可能 · 第 1 跳\\nmock/mock-server.js:1 · chokidar · 无法静态确定\\nmock/mock-server.js:2 · body-parser · 无法静态确定\\nmock/mock-server.js:3 · chalk · 无法静态确定\\nmock/mock-server.js:4 · path · 无法静态确定\\nmock/mock-server.js:5 · mockjs · 无法静态确定\\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\\n\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "impact",
+                    "arguments": {
+                      "target": "mock/mock-server.js"
+                    }
+                  },
+                  "id": 4
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 4,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "mock/mock-server.js · 被引用 · 已分析\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nvue.config.js → mock/mock-server.js · 第 39 行 · 可能 · 第 1 跳\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\n"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":4,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"mock/mock-server.js · 被引用 · 已分析\\n结构快照 1795648200，深度 1。箭头始终从使用方向被使用方，行号在使用方。\\nvue.config.js → mock/mock-server.js · 第 39 行 · 可能 · 第 1 跳\\n全项目有 0 个文件未覆盖，99 处引用未确定；不能据此断言没有其他影响。\\n\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "recall",
+                    "arguments": {
+                      "query": "fixed-eval-no-match",
+                      "top_k": 5
+                    }
+                  },
+                  "id": 5
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 5,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "没有找到相关记忆。"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":5,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"没有找到相关记忆。\"}],\"isError\":false}}\n"
+              }
+            ]
+          }
+        },
+        {
+          "working_set_bytes": 10039296,
+          "peak_working_set_bytes": 10096640,
+          "sample": "oh-memos",
+          "idle_seconds": 30.000517700013006,
+          "before_idle": {
+            "working_set_bytes": 10080256,
+            "peak_working_set_bytes": 10080256
+          },
+          "knowledge_requests": 4,
+          "answers": [
+            {
+              "transport": "mcp",
+              "tool": "overview",
+              "arguments": {},
+              "error": false,
+              "returncode": null,
+              "text": "项目：idle · 标识=01M8AFM56XTPHCEG30KXT7X4SG · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/oh-memos/peer/idle\n目标：尚未确认。\n快照：01M8AFM7A4B3YBVCKVS076Q4CA",
+              "stderr": "",
+              "stdout_bytes": 214,
+              "stderr_bytes": 0,
+              "answer_bytes": 214,
+              "wire_bytes": 321,
+              "ms": 3.292000008514151,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 2,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "项目：idle · 标识=01M8AFM56XTPHCEG30KXT7X4SG · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/oh-memos/peer/idle\n目标：尚未确认。\n快照：01M8AFM7A4B3YBVCKVS076Q4CA"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "explain",
+              "arguments": {
+                "target": "mcp-server/handlers/calendar.py"
+              },
+              "error": false,
+              "returncode": null,
+              "text": "mcp-server/handlers/calendar.py · 依赖 · 已分析\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmcp-server/handlers/calendar.py → mcp-server/api_client.py · 第 16 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/config.py · 第 17 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/cube_manager.py · 第 18 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/handlers/utils.py · 第 21 行 · 可能 · 第 1 跳\n符号 get_semester_dates · function · 第 28 行\n符号 get_week_dates · function · 第 56 行\n符号 format_project_timeline · function · 第 64 行\n符号 format_calendar_output · function · 第 118 行\n符号 handle_memos_calendar · function · 第 216 行\nmcp-server/handlers/calendar.py:11 · datetime · 受管文件中没有候选\nmcp-server/handlers/calendar.py:12 · typing · 受管文件中没有候选\nmcp-server/handlers/calendar.py:14 · httpx · 受管文件中没有候选\nmcp-server/handlers/calendar.py:19 · mcp.types · 受管文件中没有候选\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\n",
+              "stderr": "",
+              "stdout_bytes": 1230,
+              "stderr_bytes": 0,
+              "answer_bytes": 1230,
+              "wire_bytes": 1336,
+              "ms": 1.0984000109601766,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 3,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mcp-server/handlers/calendar.py · 依赖 · 已分析\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmcp-server/handlers/calendar.py → mcp-server/api_client.py · 第 16 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/config.py · 第 17 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/cube_manager.py · 第 18 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/handlers/utils.py · 第 21 行 · 可能 · 第 1 跳\n符号 get_semester_dates · function · 第 28 行\n符号 get_week_dates · function · 第 56 行\n符号 format_project_timeline · function · 第 64 行\n符号 format_calendar_output · function · 第 118 行\n符号 handle_memos_calendar · function · 第 216 行\nmcp-server/handlers/calendar.py:11 · datetime · 受管文件中没有候选\nmcp-server/handlers/calendar.py:12 · typing · 受管文件中没有候选\nmcp-server/handlers/calendar.py:14 · httpx · 受管文件中没有候选\nmcp-server/handlers/calendar.py:19 · mcp.types · 受管文件中没有候选\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\n"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "impact",
+              "arguments": {
+                "target": "mcp-server/handlers/calendar.py"
+              },
+              "error": false,
+              "returncode": null,
+              "text": "mcp-server/handlers/calendar.py · 被引用 · 已分析\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmcp-server/handlers/__init__.py → mcp-server/handlers/calendar.py · 第 21 行 · 可能 · 第 1 跳\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\n",
+              "stderr": "",
+              "stdout_bytes": 366,
+              "stderr_bytes": 0,
+              "answer_bytes": 366,
+              "wire_bytes": 460,
+              "ms": 1.6001000185497105,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 4,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mcp-server/handlers/calendar.py · 被引用 · 已分析\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmcp-server/handlers/__init__.py → mcp-server/handlers/calendar.py · 第 21 行 · 可能 · 第 1 跳\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\n"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            },
+            {
+              "transport": "mcp",
+              "tool": "recall",
+              "arguments": {
+                "query": "fixed-eval-no-match",
+                "top_k": 5
+              },
+              "error": false,
+              "returncode": null,
+              "text": "没有找到相关记忆。",
+              "stderr": "",
+              "stdout_bytes": 27,
+              "stderr_bytes": 0,
+              "answer_bytes": 27,
+              "wire_bytes": 117,
+              "ms": 0.5408000142779201,
+              "rpc_reply": {
+                "jsonrpc": "2.0",
+                "id": 5,
+                "result": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "没有找到相关记忆。"
+                    }
+                  ],
+                  "isError": false
+                }
+              }
+            }
+          ],
+          "session": {
+            "returncode": 0,
+            "stderr": "",
+            "protocol_requests": 5,
+            "protocol_response_bytes": 2376,
+            "transcript": [
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "initialize",
+                  "params": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {},
+                    "clientInfo": {
+                      "name": "loom-fixed-eval",
+                      "version": "1"
+                    }
+                  },
+                  "id": 1
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 1,
+                  "result": {
+                    "protocolVersion": "2025-06-18",
+                    "capabilities": {
+                      "tools": {}
+                    },
+                    "serverInfo": {
+                      "name": "loom",
+                      "version": "0.1.0"
+                    }
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"protocolVersion\":\"2025-06-18\",\"capabilities\":{\"tools\":{}},\"serverInfo\":{\"name\":\"loom\",\"version\":\"0.1.0\"}}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "notifications/initialized"
+                }
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "overview",
+                    "arguments": {}
+                  },
+                  "id": 2
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 2,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "项目：idle · 标识=01M8AFM56XTPHCEG30KXT7X4SG · 根=\\\\?\\redacted://historical-work/u2/r4-paired/resources/oh-memos/peer/idle\n目标：尚未确认。\n快照：01M8AFM7A4B3YBVCKVS076Q4CA"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"项目：idle · 标识=01M8AFM56XTPHCEG30KXT7X4SG · 根=\\\\\\\\?\\\\redacted://historical-work/u2/r4-paired/resources/oh-memos/peer/idle/n目标：尚未确认。/n快照：01M8AFM7A4B3YBVCKVS076Q4CA\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "explain",
+                    "arguments": {
+                      "target": "mcp-server/handlers/calendar.py"
+                    }
+                  },
+                  "id": 3
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 3,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "mcp-server/handlers/calendar.py · 依赖 · 已分析\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmcp-server/handlers/calendar.py → mcp-server/api_client.py · 第 16 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/config.py · 第 17 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/cube_manager.py · 第 18 行 · 可能 · 第 1 跳\nmcp-server/handlers/calendar.py → mcp-server/handlers/utils.py · 第 21 行 · 可能 · 第 1 跳\n符号 get_semester_dates · function · 第 28 行\n符号 get_week_dates · function · 第 56 行\n符号 format_project_timeline · function · 第 64 行\n符号 format_calendar_output · function · 第 118 行\n符号 handle_memos_calendar · function · 第 216 行\nmcp-server/handlers/calendar.py:11 · datetime · 受管文件中没有候选\nmcp-server/handlers/calendar.py:12 · typing · 受管文件中没有候选\nmcp-server/handlers/calendar.py:14 · httpx · 受管文件中没有候选\nmcp-server/handlers/calendar.py:19 · mcp.types · 受管文件中没有候选\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\n"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":3,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"mcp-server/handlers/calendar.py · 依赖 · 已分析\\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\\nmcp-server/handlers/calendar.py → mcp-server/api_client.py · 第 16 行 · 可能 · 第 1 跳\\nmcp-server/handlers/calendar.py → mcp-server/config.py · 第 17 行 · 可能 · 第 1 跳\\nmcp-server/handlers/calendar.py → mcp-server/cube_manager.py · 第 18 行 · 可能 · 第 1 跳\\nmcp-server/handlers/calendar.py → mcp-server/handlers/utils.py · 第 21 行 · 可能 · 第 1 跳\\n符号 get_semester_dates · function · 第 28 行\\n符号 get_week_dates · function · 第 56 行\\n符号 format_project_timeline · function · 第 64 行\\n符号 format_calendar_output · function · 第 118 行\\n符号 handle_memos_calendar · function · 第 216 行\\nmcp-server/handlers/calendar.py:11 · datetime · 受管文件中没有候选\\nmcp-server/handlers/calendar.py:12 · typing · 受管文件中没有候选\\nmcp-server/handlers/calendar.py:14 · httpx · 受管文件中没有候选\\nmcp-server/handlers/calendar.py:19 · mcp.types · 受管文件中没有候选\\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\\n\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "impact",
+                    "arguments": {
+                      "target": "mcp-server/handlers/calendar.py"
+                    }
+                  },
+                  "id": 4
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 4,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "mcp-server/handlers/calendar.py · 被引用 · 已分析\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\nmcp-server/handlers/__init__.py → mcp-server/handlers/calendar.py · 第 21 行 · 可能 · 第 1 跳\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\n"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":4,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"mcp-server/handlers/calendar.py · 被引用 · 已分析\\n结构快照 1795648265，深度 1。箭头始终从使用方向被使用方，行号在使用方。\\nmcp-server/handlers/__init__.py → mcp-server/handlers/calendar.py · 第 21 行 · 可能 · 第 1 跳\\n全项目有 8 个文件未覆盖，1799 处引用未确定；不能据此断言没有其他影响。\\n\"}],\"isError\":false}}\n"
+              },
+              {
+                "sent": {
+                  "jsonrpc": "2.0",
+                  "method": "tools/call",
+                  "params": {
+                    "name": "recall",
+                    "arguments": {
+                      "query": "fixed-eval-no-match",
+                      "top_k": 5
+                    }
+                  },
+                  "id": 5
+                }
+              },
+              {
+                "received": {
+                  "jsonrpc": "2.0",
+                  "id": 5,
+                  "result": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "没有找到相关记忆。"
+                      }
+                    ],
+                    "isError": false
+                  }
+                },
+                "raw_utf8": "{\"jsonrpc\":\"2.0\",\"id\":5,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"没有找到相关记忆。\"}],\"isError\":false}}\n"
+              }
+            ]
+          }
+        }
+      ],
+      "errors": []
+    }
+  },
+  "samples": {
+    "loom-rust": {
+      "source": "redacted://historical-work/samples-rust/loom-cc2a954",
+      "expected_revision": "cc2a954 (export without .git)",
+      "language": "Rust",
+      "git_info_exclude_sha256": null,
+      "manifest": {
+        "sha256": "b460b4c74ecb1ffcc9306ea06c9de91bd6aed45f59dccd0fa3ba0f4656b5a333",
+        "files": 103
+      },
+      "status": "verified"
+    },
+    "vue-element-admin": {
+      "source": "redacted://historical-work/samples/vue-element-admin",
+      "expected_revision": "6858a9ad67483025f6a9432a926beb9327037be3",
+      "language": "JS/Vue",
+      "head": "6858a9ad67483025f6a9432a926beb9327037be3",
+      "git_info_exclude_sha256": null,
+      "manifest": {
+        "sha256": "435496d388082a2ec7ff192cbb37d81f5d838496c009b9b440b013abbfc5c109",
+        "files": 307
+      },
+      "status": "verified"
+    },
+    "oh-memos": {
+      "source": "redacted://historical-work/samples/oh-memos",
+      "expected_revision": "810627efafacb7845f4a3cb2031ae8b0bf00473d",
+      "language": "Python",
+      "head": "810627efafacb7845f4a3cb2031ae8b0bf00473d",
+      "git_info_exclude_sha256": null,
+      "manifest": {
+        "sha256": "06d6b82526dc808577555300274e6ceb624457f3cea5002785a23ea6097014f0",
+        "files": 925
+      },
+      "status": "verified"
+    }
+  },
+  "note": "Peer resource-only report; run quality suite separately."
+}

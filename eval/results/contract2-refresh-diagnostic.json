@@ -1,0 +1,1491 @@
+{
+  "note": "Supplement only; fixed five-round resource results are unchanged. Warm copies, no cache clearing.",
+  "sample": "vue-element-admin",
+  "rounds": 31,
+  "executables": {
+    "old": {
+      "path": "redacted://historical-work/u1/baseline/loom-rev8.exe",
+      "sha256": "c043355f8a5619925aff193c307b74ab749e4decbdf01ac8f5fab676df8b37dd"
+    },
+    "new": {
+      "path": "redacted://historical-work/target-u3/release/loom.exe",
+      "sha256": "4a16c8cfbc9ecd3036a621abbb0ffe8c72443e3d876a68dc41d2982802e0a3d5"
+    }
+  },
+  "summary": {
+    "old": {
+      "median": 95.65639999345876,
+      "min": 84.22479999717325,
+      "max": 165.56280001532286,
+      "rounds": 31,
+      "observations": 31
+    },
+    "new": {
+      "median": 97.16000000480562,
+      "min": 84.79999998235144,
+      "max": 139.55610000994056,
+      "rounds": 31,
+      "observations": 31
+    },
+    "median_increase_percent": 1.5718760181751446
+  },
+  "runs": [
+    {
+      "round": 1,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 90.12590002384968,
+          "peak_working_set_bytes": 8859648,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719,\"generation\":3,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 366,
+          "stderr_bytes": 0,
+          "answer_bytes": 366,
+          "wire_bytes": 366,
+          "ms": 90.06370001588948,
+          "peak_working_set_bytes": 9027584,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 2,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719,\"generation\":4,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 366,
+          "stderr_bytes": 0,
+          "answer_bytes": 366,
+          "wire_bytes": 366,
+          "ms": 97.7984000055585,
+          "peak_working_set_bytes": 9023488,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 92.84309999202378,
+          "peak_working_set_bytes": 8855552,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 3,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 105.76420000870712,
+          "peak_working_set_bytes": 8847360,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719,\"generation\":5,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 366,
+          "stderr_bytes": 0,
+          "answer_bytes": 366,
+          "wire_bytes": 366,
+          "ms": 113.13009998411871,
+          "peak_working_set_bytes": 9027584,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 4,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719,\"generation\":6,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 366,
+          "stderr_bytes": 0,
+          "answer_bytes": 366,
+          "wire_bytes": 366,
+          "ms": 116.44369998248294,
+          "peak_working_set_bytes": 9031680,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 96.6430000262335,
+          "peak_working_set_bytes": 8830976,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 5,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627719}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 102.27990002022125,
+          "peak_working_set_bytes": 8822784,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720,\"generation\":7,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 366,
+          "stderr_bytes": 0,
+          "answer_bytes": 366,
+          "wire_bytes": 366,
+          "ms": 100.06779999821447,
+          "peak_working_set_bytes": 9027584,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 6,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720,\"generation\":8,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 366,
+          "stderr_bytes": 0,
+          "answer_bytes": 366,
+          "wire_bytes": 366,
+          "ms": 106.66439999477006,
+          "peak_working_set_bytes": 9076736,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 105.46679998515174,
+          "peak_working_set_bytes": 8822784,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 7,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 111.30300001241267,
+          "peak_working_set_bytes": 8847360,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720,\"generation\":9,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 366,
+          "stderr_bytes": 0,
+          "answer_bytes": 366,
+          "wire_bytes": 366,
+          "ms": 131.2235000077635,
+          "peak_working_set_bytes": 9043968,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 8,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720,\"generation\":10,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 127.07610000506975,
+          "peak_working_set_bytes": 9043968,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 165.56280001532286,
+          "peak_working_set_bytes": 8945664,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 9,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627720}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 140.10700001381338,
+          "peak_working_set_bytes": 8839168,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627721,\"generation\":11,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 121.46759999450296,
+          "peak_working_set_bytes": 8912896,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 10,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627721,\"generation\":12,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 129.9728000012692,
+          "peak_working_set_bytes": 9031680,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627721}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 154.21810001134872,
+          "peak_working_set_bytes": 8863744,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 11,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627721}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 144.63689998956397,
+          "peak_working_set_bytes": 8847360,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627721,\"generation\":13,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 131.9552999921143,
+          "peak_working_set_bytes": 9023488,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 12,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627721,\"generation\":14,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 139.55610000994056,
+          "peak_working_set_bytes": 9027584,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627721}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 127.53950001206249,
+          "peak_working_set_bytes": 8859648,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 13,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 110.09249999187887,
+          "peak_working_set_bytes": 8851456,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722,\"generation\":15,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 97.51630001119338,
+          "peak_working_set_bytes": 8974336,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 14,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722,\"generation\":16,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 100.7716000021901,
+          "peak_working_set_bytes": 8994816,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 88.03310000803322,
+          "peak_working_set_bytes": 8843264,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 15,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 112.94890000135638,
+          "peak_working_set_bytes": 8830976,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722,\"generation\":17,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 92.32789999805391,
+          "peak_working_set_bytes": 9068544,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 16,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722,\"generation\":18,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 84.79999998235144,
+          "peak_working_set_bytes": 9023488,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 94.58720000111498,
+          "peak_working_set_bytes": 8880128,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 17,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 86.70630000415258,
+          "peak_working_set_bytes": 8880128,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627722,\"generation\":19,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 87.82559999963269,
+          "peak_working_set_bytes": 9019392,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 18,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723,\"generation\":20,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 92.49089998775162,
+          "peak_working_set_bytes": 9011200,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 93.62800000235438,
+          "peak_working_set_bytes": 8835072,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 19,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 84.22479999717325,
+          "peak_working_set_bytes": 8908800,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723,\"generation\":21,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 92.55669999402016,
+          "peak_working_set_bytes": 9023488,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 20,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723,\"generation\":22,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 106.47070000413805,
+          "peak_working_set_bytes": 9035776,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 92.6573000033386,
+          "peak_working_set_bytes": 8826880,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 21,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 108.05199999595061,
+          "peak_working_set_bytes": 8843264,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723,\"generation\":23,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 91.87889998429455,
+          "peak_working_set_bytes": 9043968,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 22,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723,\"generation\":24,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 90.92429999145679,
+          "peak_working_set_bytes": 9011200,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 85.81280001089908,
+          "peak_working_set_bytes": 8847360,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 23,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627723}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 92.92049999930896,
+          "peak_working_set_bytes": 8830976,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724,\"generation\":25,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 92.07680000690743,
+          "peak_working_set_bytes": 9039872,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 24,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724,\"generation\":26,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 91.88719998928718,
+          "peak_working_set_bytes": 8876032,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 107.07450000336394,
+          "peak_working_set_bytes": 8896512,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 25,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 102.95840000617318,
+          "peak_working_set_bytes": 8863744,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724,\"generation\":27,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 94.12220001104288,
+          "peak_working_set_bytes": 9027584,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 26,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724,\"generation\":28,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 94.57689998089336,
+          "peak_working_set_bytes": 9031680,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 89.4055999815464,
+          "peak_working_set_bytes": 8822784,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 27,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 90.07219999330118,
+          "peak_working_set_bytes": 8843264,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724,\"generation\":29,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 90.23669999442063,
+          "peak_working_set_bytes": 8994816,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 28,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627724,\"generation\":30,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 93.27650000341237,
+          "peak_working_set_bytes": 8974336,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627725}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 87.77069998905063,
+          "peak_working_set_bytes": 8835072,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 29,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627725}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 95.65639999345876,
+          "peak_working_set_bytes": 8835072,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627725,\"generation\":31,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 113.00639997352846,
+          "peak_working_set_bytes": 9043968,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 30,
+      "order": [
+        "new",
+        "old"
+      ],
+      "answers": {
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627725,\"generation\":32,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 97.16000000480562,
+          "peak_working_set_bytes": 9023488,
+          "memory_error": null
+        },
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627725}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 92.01560000656173,
+          "peak_working_set_bytes": 8912896,
+          "memory_error": null
+        }
+      }
+    },
+    {
+      "round": 31,
+      "order": [
+        "old",
+        "new"
+      ],
+      "answers": {
+        "old": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627725}\n",
+          "stderr": "",
+          "stdout_bytes": 163,
+          "stderr_bytes": 0,
+          "answer_bytes": 163,
+          "wire_bytes": 163,
+          "ms": 90.75540001504123,
+          "peak_working_set_bytes": 8859648,
+          "memory_error": null
+        },
+        "new": {
+          "transport": "cli",
+          "args": [
+            "index",
+            "--json"
+          ],
+          "returncode": 0,
+          "error": false,
+          "timed_out": false,
+          "text": "{\"scope\":\"git\",\"withheld\":0,\"parsed\":0,\"unchanged\":221,\"removed\":0,\"seen\":221,\"uncovered\":0,\"relinked\":0,\"relations\":280,\"unresolved\":99,\"finished_at\":1795627725,\"generation\":33,\"excluded_dirs\":0,\"excluded_files\":0,\"inputs\":\"62b47d3301a9fd0125e0a34f6fe33636ce749f7bc4ac750a80c73bb10b5b2ea8\",\"refs\":379,\"coverage\":{\"indexed\":221,\"ref:missing\":7,\"ref:unsupported\":92}}\n",
+          "stderr": "",
+          "stdout_bytes": 367,
+          "stderr_bytes": 0,
+          "answer_bytes": 367,
+          "wire_bytes": 367,
+          "ms": 92.05950002069585,
+          "peak_working_set_bytes": 9031680,
+          "memory_error": null
+        }
+      }
+    }
+  ]
+}

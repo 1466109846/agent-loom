@@ -1,0 +1,509 @@
+{
+  "exe": "redacted://historical-work/target-u3/release/loom.exe",
+  "exe_sha256": "4a16c8cfbc9ecd3036a621abbb0ffe8c72443e3d876a68dc41d2982802e0a3d5",
+  "comparison_script": "redacted://development-repository/target/lang-scratch/u1-jsoncmp.py",
+  "comparison_script_sha256": "0dd8cb63f2d67c4f21c23bd2d24c91f1d360544567f2752de585f7da86d74284",
+  "base": "redacted://historical-work/u1",
+  "reuse": true,
+  "completed": true,
+  "samples": [
+    {
+      "sample": "loom-530d729",
+      "old": "redacted://historical-work/u1/regress/old-loom-530d729.jsonl",
+      "root": "redacted://historical-work/u1/regress/new/loom-530d729",
+      "final": "redacted://historical-work/u1/regress/final-loom-530d729.jsonl",
+      "old_queries": 100,
+      "old_sha256": "dcd2c7f7209e69de6a1357dabb0dd5a372e9426c6764c37fafeac8b988a7dfc9",
+      "dump_exit": 0,
+      "diff_exit": 0,
+      "final_sha256": "7fc32bc92bc8bea44716751e9c6f3ff370e8e15ff2263b63e599adea56ecfc7a",
+      "final_bytes": 181490,
+      "audit": {
+        "old_files": 25,
+        "final_files": 25,
+        "old_queries": 100,
+        "final_queries": 100,
+        "old_duplicate_queries": 0,
+        "final_duplicate_queries": 0,
+        "query_set_symmetric_difference": 0,
+        "query_grid_complete": true,
+        "legacy_different_queries": 0,
+        "legacy_field_differences": {},
+        "legacy_difference_examples": [],
+        "old_query_errors": 0,
+        "final_query_errors": 0,
+        "query_error_examples": {
+          "old": [],
+          "final": []
+        },
+        "contract_missing_queries": 0,
+        "contract_missing_fields": {},
+        "contract_version_errors": 0,
+        "snapshot_null_queries": 0,
+        "known_coverage_queries": 100,
+        "verdict_relation_mismatches": 0,
+        "verdicts": {
+          "gap": 48,
+          "found": 50,
+          "none_in_snapshot": 2
+        },
+        "index_contract_missing_fields": [],
+        "index_legacy_differences": {
+          "parsed": {
+            "old": 25,
+            "final": 0
+          },
+          "unchanged": {
+            "old": 0,
+            "final": 25
+          },
+          "relinked": {
+            "old": 146,
+            "final": 0
+          }
+        },
+        "index_finished_at": {
+          "old": 1795562374,
+          "final": 1795626728
+        },
+        "old_sha256_verified": true,
+        "final_sha256_verified": true,
+        "index_reuse_counters_only": true,
+        "passed": true
+      }
+    },
+    {
+      "sample": "loom-c128cec",
+      "old": "redacted://historical-work/u1/regress/old-loom-c128cec.jsonl",
+      "root": "redacted://historical-work/u1/regress/new/loom-c128cec",
+      "final": "redacted://historical-work/u1/regress/final-loom-c128cec.jsonl",
+      "old_queries": 284,
+      "old_sha256": "a2145e0aa6f43dff3e72817269441c1f141a95163ec3729bbced4cd4805cf911",
+      "dump_exit": 0,
+      "diff_exit": 0,
+      "final_sha256": "a78feaa4512434fff39e6f0a1ae9de83dbe18bf036bbd299acc9a96b99d603c2",
+      "final_bytes": 505356,
+      "audit": {
+        "old_files": 71,
+        "final_files": 71,
+        "old_queries": 284,
+        "final_queries": 284,
+        "old_duplicate_queries": 0,
+        "final_duplicate_queries": 0,
+        "query_set_symmetric_difference": 0,
+        "query_grid_complete": true,
+        "legacy_different_queries": 0,
+        "legacy_field_differences": {},
+        "legacy_difference_examples": [],
+        "old_query_errors": 0,
+        "final_query_errors": 0,
+        "query_error_examples": {
+          "old": [],
+          "final": []
+        },
+        "contract_missing_queries": 0,
+        "contract_missing_fields": {},
+        "contract_version_errors": 0,
+        "snapshot_null_queries": 0,
+        "known_coverage_queries": 284,
+        "verdict_relation_mismatches": 0,
+        "verdicts": {
+          "found": 156,
+          "gap": 126,
+          "none_in_snapshot": 2
+        },
+        "index_contract_missing_fields": [],
+        "index_legacy_differences": {
+          "parsed": {
+            "old": 71,
+            "final": 0
+          },
+          "unchanged": {
+            "old": 0,
+            "final": 71
+          },
+          "relinked": {
+            "old": 416,
+            "final": 0
+          }
+        },
+        "index_finished_at": {
+          "old": 1795562376,
+          "final": 1795626730
+        },
+        "old_sha256_verified": true,
+        "final_sha256_verified": true,
+        "index_reuse_counters_only": true,
+        "passed": true
+      }
+    },
+    {
+      "sample": "loom-cc2a954",
+      "old": "redacted://historical-work/u1/regress/old-loom-cc2a954.jsonl",
+      "root": "redacted://historical-work/u1/regress/new/loom-cc2a954",
+      "final": "redacted://historical-work/u1/regress/final-loom-cc2a954.jsonl",
+      "old_queries": 320,
+      "old_sha256": "afd5691da1978afdd8a26cc177ef164e483723e433bb8bbd5d2e4888d45c80d3",
+      "dump_exit": 0,
+      "diff_exit": 0,
+      "final_sha256": "6a73d05b999c1b75199b1beb0a5f3d73e386ae094018a50c11c52d2cb6c9c7bf",
+      "final_bytes": 558637,
+      "audit": {
+        "old_files": 80,
+        "final_files": 80,
+        "old_queries": 320,
+        "final_queries": 320,
+        "old_duplicate_queries": 0,
+        "final_duplicate_queries": 0,
+        "query_set_symmetric_difference": 0,
+        "query_grid_complete": true,
+        "legacy_different_queries": 0,
+        "legacy_field_differences": {},
+        "legacy_difference_examples": [],
+        "old_query_errors": 0,
+        "final_query_errors": 0,
+        "query_error_examples": {
+          "old": [],
+          "final": []
+        },
+        "contract_missing_queries": 0,
+        "contract_missing_fields": {},
+        "contract_version_errors": 0,
+        "snapshot_null_queries": 0,
+        "known_coverage_queries": 320,
+        "verdict_relation_mismatches": 0,
+        "verdicts": {
+          "found": 174,
+          "gap": 144,
+          "none_in_snapshot": 2
+        },
+        "index_contract_missing_fields": [],
+        "index_legacy_differences": {
+          "parsed": {
+            "old": 80,
+            "final": 0
+          },
+          "unchanged": {
+            "old": 0,
+            "final": 80
+          },
+          "relinked": {
+            "old": 456,
+            "final": 0
+          }
+        },
+        "index_finished_at": {
+          "old": 1795562380,
+          "final": 1795626737
+        },
+        "old_sha256_verified": true,
+        "final_sha256_verified": true,
+        "index_reuse_counters_only": true,
+        "passed": true
+      }
+    },
+    {
+      "sample": "vue-element-admin",
+      "old": "redacted://historical-work/u1/regress/old-vue-element-admin.jsonl",
+      "root": "redacted://historical-work/u1/regress/new/vue-element-admin",
+      "final": "redacted://historical-work/u1/regress/final-vue-element-admin.jsonl",
+      "old_queries": 884,
+      "old_sha256": "8c70c853424bb77588237182f880c0d00129c148802af307beb1cab33949e8ac",
+      "dump_exit": 0,
+      "diff_exit": 0,
+      "final_sha256": "99a3a398545f23cad5d08fdd03d74e249e661b6d71dcae3ae348d29ecc2c5fdc",
+      "final_bytes": 1468306,
+      "audit": {
+        "old_files": 221,
+        "final_files": 221,
+        "old_queries": 884,
+        "final_queries": 884,
+        "old_duplicate_queries": 0,
+        "final_duplicate_queries": 0,
+        "query_set_symmetric_difference": 0,
+        "query_grid_complete": true,
+        "legacy_different_queries": 0,
+        "legacy_field_differences": {},
+        "legacy_difference_examples": [],
+        "old_query_errors": 0,
+        "final_query_errors": 0,
+        "query_error_examples": {
+          "old": [],
+          "final": []
+        },
+        "contract_missing_queries": 0,
+        "contract_missing_fields": {},
+        "contract_version_errors": 0,
+        "snapshot_null_queries": 0,
+        "known_coverage_queries": 884,
+        "verdict_relation_mismatches": 0,
+        "verdicts": {
+          "none_in_snapshot": 152,
+          "gap": 100,
+          "found": 632
+        },
+        "index_contract_missing_fields": [],
+        "index_legacy_differences": {
+          "parsed": {
+            "old": 221,
+            "final": 0
+          },
+          "unchanged": {
+            "old": 0,
+            "final": 221
+          },
+          "relinked": {
+            "old": 379,
+            "final": 0
+          }
+        },
+        "index_finished_at": {
+          "old": 1795562385,
+          "final": 1795626743
+        },
+        "old_sha256_verified": true,
+        "final_sha256_verified": true,
+        "index_reuse_counters_only": true,
+        "passed": true
+      }
+    },
+    {
+      "sample": "vitepress",
+      "old": "redacted://historical-work/u1/regress/old-vitepress.jsonl",
+      "root": "redacted://historical-work/u1/regress/new/vitepress",
+      "final": "redacted://historical-work/u1/regress/final-vitepress.jsonl",
+      "old_queries": 1084,
+      "old_sha256": "ef01d3cf982d6e216df48c1be8f7d40234f93723406318c8095dd9ed37bd2f04",
+      "dump_exit": 0,
+      "diff_exit": 0,
+      "final_sha256": "49f2eb6ac3497233512a5c47d2ee6a0c39d2dc34d452e293c92b86de83f6091f",
+      "final_bytes": 3103415,
+      "audit": {
+        "old_files": 271,
+        "final_files": 271,
+        "old_queries": 1084,
+        "final_queries": 1084,
+        "old_duplicate_queries": 0,
+        "final_duplicate_queries": 0,
+        "query_set_symmetric_difference": 0,
+        "query_grid_complete": true,
+        "legacy_different_queries": 0,
+        "legacy_field_differences": {},
+        "legacy_difference_examples": [],
+        "old_query_errors": 0,
+        "final_query_errors": 0,
+        "query_error_examples": {
+          "old": [],
+          "final": []
+        },
+        "contract_missing_queries": 0,
+        "contract_missing_fields": {},
+        "contract_version_errors": 0,
+        "snapshot_null_queries": 0,
+        "known_coverage_queries": 1084,
+        "verdict_relation_mismatches": 0,
+        "verdicts": {
+          "found": 654,
+          "gap": 354,
+          "none_in_snapshot": 76
+        },
+        "index_contract_missing_fields": [],
+        "index_legacy_differences": {
+          "parsed": {
+            "old": 271,
+            "final": 0
+          },
+          "unchanged": {
+            "old": 0,
+            "final": 271
+          },
+          "relinked": {
+            "old": 1044,
+            "final": 0
+          }
+        },
+        "index_finished_at": {
+          "old": 1795562396,
+          "final": 1795626763
+        },
+        "old_sha256_verified": true,
+        "final_sha256_verified": true,
+        "index_reuse_counters_only": true,
+        "passed": true
+      }
+    },
+    {
+      "sample": "oh-memos",
+      "old": "redacted://historical-work/u1/regress/old-oh-memos.jsonl",
+      "root": "redacted://historical-work/u1/regress/new/oh-memos",
+      "final": "redacted://historical-work/u1/regress/final-oh-memos.jsonl",
+      "old_queries": 2476,
+      "old_sha256": "cad77990ebe7d81cb41112a2d4d3aba1917b2967dc6338c420ba0037dbda36b1",
+      "dump_exit": 0,
+      "diff_exit": 0,
+      "final_sha256": "22da61bb610cb935103b8d611e2eae03b3aaec7357cdf200bf9fc72d539610e9",
+      "final_bytes": 10399908,
+      "audit": {
+        "old_files": 619,
+        "final_files": 619,
+        "old_queries": 2476,
+        "final_queries": 2476,
+        "old_duplicate_queries": 0,
+        "final_duplicate_queries": 0,
+        "query_set_symmetric_difference": 0,
+        "query_grid_complete": true,
+        "legacy_different_queries": 0,
+        "legacy_field_differences": {},
+        "legacy_difference_examples": [],
+        "old_query_errors": 0,
+        "final_query_errors": 0,
+        "query_error_examples": {
+          "old": [],
+          "final": []
+        },
+        "contract_missing_queries": 0,
+        "contract_missing_fields": {},
+        "contract_version_errors": 0,
+        "snapshot_null_queries": 0,
+        "known_coverage_queries": 2476,
+        "verdict_relation_mismatches": 0,
+        "verdicts": {
+          "none_in_snapshot": 160,
+          "gap": 730,
+          "found": 1586
+        },
+        "index_contract_missing_fields": [],
+        "index_legacy_differences": {
+          "parsed": {
+            "old": 613,
+            "final": 0
+          },
+          "unchanged": {
+            "old": 0,
+            "final": 619
+          },
+          "relinked": {
+            "old": 3823,
+            "final": 0
+          }
+        },
+        "index_finished_at": {
+          "old": 1795562413,
+          "final": 1795626793
+        },
+        "old_sha256_verified": true,
+        "final_sha256_verified": true,
+        "index_reuse_counters_only": true,
+        "passed": true
+      }
+    },
+    {
+      "sample": "grpc-go",
+      "old": "redacted://historical-work/u1/regress/old-grpc-go.jsonl",
+      "root": "redacted://historical-work/u1/regress/new/grpc-go",
+      "final": "redacted://historical-work/u1/regress/final-grpc-go.jsonl",
+      "old_queries": 4220,
+      "old_sha256": "0514bc3f27fbe3c743291aa589350b15a6296a60b396823ff726c020b316849f",
+      "dump_exit": 0,
+      "diff_exit": 0,
+      "final_sha256": "8b179a2cddb41f626ec2665d3906bf3abdbfa9c25719de4d664fd889bc41a2ca",
+      "final_bytes": 22340231,
+      "audit": {
+        "old_files": 1055,
+        "final_files": 1055,
+        "old_queries": 4220,
+        "final_queries": 4220,
+        "old_duplicate_queries": 0,
+        "final_duplicate_queries": 0,
+        "query_set_symmetric_difference": 0,
+        "query_grid_complete": true,
+        "legacy_different_queries": 0,
+        "legacy_field_differences": {},
+        "legacy_difference_examples": [],
+        "old_query_errors": 0,
+        "final_query_errors": 0,
+        "query_error_examples": {
+          "old": [],
+          "final": []
+        },
+        "contract_missing_queries": 0,
+        "contract_missing_fields": {},
+        "contract_version_errors": 0,
+        "snapshot_null_queries": 0,
+        "known_coverage_queries": 4220,
+        "verdict_relation_mismatches": 0,
+        "verdicts": {
+          "found": 3062,
+          "gap": 1106,
+          "none_in_snapshot": 52
+        },
+        "index_contract_missing_fields": [],
+        "index_legacy_differences": {
+          "parsed": {
+            "old": 1055,
+            "final": 0
+          },
+          "unchanged": {
+            "old": 0,
+            "final": 1055
+          },
+          "relinked": {
+            "old": 20650,
+            "final": 0
+          }
+        },
+        "index_finished_at": {
+          "old": 1795562459,
+          "final": 1795626860
+        },
+        "old_sha256_verified": true,
+        "final_sha256_verified": true,
+        "index_reuse_counters_only": true,
+        "passed": true
+      }
+    }
+  ],
+  "current": null,
+  "exe_sha256_after": "4a16c8cfbc9ecd3036a621abbb0ffe8c72443e3d876a68dc41d2982802e0a3d5",
+  "exe_unchanged": true,
+  "comparison_script_unchanged": true,
+  "baselines_unchanged": true,
+  "totals": {
+    "old_files": 2342,
+    "final_files": 2342,
+    "old_queries": 9368,
+    "final_queries": 9368,
+    "old_duplicate_queries": 0,
+    "final_duplicate_queries": 0,
+    "query_set_symmetric_difference": 0,
+    "legacy_different_queries": 0,
+    "old_query_errors": 0,
+    "final_query_errors": 0,
+    "contract_missing_queries": 0,
+    "contract_version_errors": 0,
+    "snapshot_null_queries": 0,
+    "known_coverage_queries": 9368,
+    "verdict_relation_mismatches": 0
+  },
+  "comparison_notes": {
+    "legacy_query_fields": [
+      "target",
+      "direction",
+      "depth",
+      "status",
+      "snapshot_at_present",
+      "coverage3",
+      "symbols",
+      "relations",
+      "issues",
+      "truncated"
+    ],
+    "snapshot_at": "presence only, as in supplied comparison script",
+    "index_finished_at": "expected refresh timestamp, excluded by supplied comparison script",
+    "index_reuse": "parsed/unchanged/relinked are execution counters; explicit index reused all existing sample databases",
+    "contract_presence": "QueryReport top-level and nested contract fields, plus all six new IndexReport fields"
+  },
+  "exe_sha256_final_audit": "4a16c8cfbc9ecd3036a621abbb0ffe8c72443e3d876a68dc41d2982802e0a3d5",
+  "audit_script_sha256": "75db5afb8bbf9d9308a2c30b480664ed27d93020addc7210e091426c97cf2b53",
+  "passed": true
+}

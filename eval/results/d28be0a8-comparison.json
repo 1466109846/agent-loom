@@ -1,0 +1,1393 @@
+{
+  "schema": 1,
+  "self_check": false,
+  "pass": true,
+  "rows": [
+    {
+      "metric": "结果 schema",
+      "baseline": 1,
+      "candidate": 1,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "固定问题套件",
+      "baseline": "loom-u2-fixed-v1",
+      "candidate": "loom-u2-fixed-v1",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "冻结输入 questions_sha256",
+      "baseline": "6a903edd37a0",
+      "candidate": "6a903edd37a0",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "冻结输入 thresholds_sha256",
+      "baseline": "5ed16ee1e4f9",
+      "candidate": "5ed16ee1e4f9",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "执行基础设施",
+      "baseline": true,
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "样本 loom-rust",
+      "baseline": "verified",
+      "candidate": "verified",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "样本 oh-memos",
+      "baseline": "verified",
+      "candidate": "verified",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "样本 vue-element-admin",
+      "baseline": "verified",
+      "candidate": "verified",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "使用冻结门槛",
+      "baseline": "5ed16ee1e4f9",
+      "candidate": "5ed16ee1e4f9",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "关系标签完整",
+      "baseline": "complete",
+      "candidate": "complete",
+      "status": "PASS",
+      "note": "缺标签必须先补跑基线，不能拿夹具代替真实标签"
+    },
+    {
+      "metric": "loom-rust 标签冻结",
+      "baseline": "fe13c73e8fd2",
+      "candidate": "fe13c73e8fd2",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust 报为 exact 的准确率",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "status": "PASS",
+      "note": "最低 98%；26/26 "
+    },
+    {
+      "metric": "loom-rust 报为 likely 的准确率",
+      "baseline": null,
+      "candidate": "N/A",
+      "status": "NOTE",
+      "note": "标注的行上没有报出这一类；不虚构准确率"
+    },
+    {
+      "metric": "loom-rust 逐条无丢失",
+      "baseline": 34,
+      "candidate": 34,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust 无新增错误",
+      "baseline": 6,
+      "candidate": 6,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust exact 标签",
+      "baseline": "26/32",
+      "candidate": "26/32",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "loom-rust likely 标签",
+      "baseline": "0/0",
+      "candidate": "0/0",
+      "status": "NOTE",
+      "note": "没有这一类标签"
+    },
+    {
+      "metric": "loom-rust none 标签",
+      "baseline": "8/8",
+      "candidate": "8/8",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "loom-rust ambiguous 标签",
+      "baseline": "0/0",
+      "candidate": "0/0",
+      "status": "NOTE",
+      "note": "没有这一类标签"
+    },
+    {
+      "metric": "loom-rust 应连上的关系里连上的比例",
+      "baseline": 0.8125,
+      "candidate": 0.8125,
+      "status": "PASS",
+      "note": "26/32 → 26/32；不得低于基线"
+    },
+    {
+      "metric": "loom-rust 索引范围",
+      "baseline": "git",
+      "candidate": "git",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos 标签冻结",
+      "baseline": "b12f2434e3f3",
+      "candidate": "b12f2434e3f3",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos 报为 exact 的准确率",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "status": "PASS",
+      "note": "最低 98%；8/8 "
+    },
+    {
+      "metric": "oh-memos 报为 likely 的准确率",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "status": "PASS",
+      "note": "最低 95%；24/24 "
+    },
+    {
+      "metric": "oh-memos 逐条无丢失",
+      "baseline": 40,
+      "candidate": 40,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos 无新增错误",
+      "baseline": 0,
+      "candidate": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos exact 标签",
+      "baseline": "8/8",
+      "candidate": "8/8",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "oh-memos likely 标签",
+      "baseline": "24/24",
+      "candidate": "24/24",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "oh-memos none 标签",
+      "baseline": "8/8",
+      "candidate": "8/8",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "oh-memos ambiguous 标签",
+      "baseline": "0/0",
+      "candidate": "0/0",
+      "status": "NOTE",
+      "note": "没有这一类标签"
+    },
+    {
+      "metric": "oh-memos 应连上的关系里连上的比例",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "status": "PASS",
+      "note": "32/32 → 32/32；不得低于基线"
+    },
+    {
+      "metric": "oh-memos 索引范围",
+      "baseline": "git",
+      "candidate": "git",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin 标签冻结",
+      "baseline": "2794b35706c2",
+      "candidate": "2794b35706c2",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin 报为 exact 的准确率",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "status": "PASS",
+      "note": "最低 98%；7/7 "
+    },
+    {
+      "metric": "vue-element-admin 报为 likely 的准确率",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "status": "PASS",
+      "note": "最低 95%；25/25 "
+    },
+    {
+      "metric": "vue-element-admin 逐条无丢失",
+      "baseline": 40,
+      "candidate": 40,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin 无新增错误",
+      "baseline": 0,
+      "candidate": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin exact 标签",
+      "baseline": "7/7",
+      "candidate": "7/7",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "vue-element-admin likely 标签",
+      "baseline": "25/25",
+      "candidate": "25/25",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "vue-element-admin none 标签",
+      "baseline": "8/8",
+      "candidate": "8/8",
+      "status": "NOTE",
+      "note": "按标签类别计，仅供对照"
+    },
+    {
+      "metric": "vue-element-admin ambiguous 标签",
+      "baseline": "0/0",
+      "candidate": "0/0",
+      "status": "NOTE",
+      "note": "没有这一类标签"
+    },
+    {
+      "metric": "vue-element-admin 应连上的关系里连上的比例",
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "status": "PASS",
+      "note": "32/32 → 32/32；不得低于基线"
+    },
+    {
+      "metric": "vue-element-admin 索引范围",
+      "baseline": "git",
+      "candidate": "git",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "问题运行完整",
+      "baseline": "complete",
+      "candidate": "complete",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "错报不存在",
+      "baseline": 5,
+      "candidate": 0,
+      "status": "PASS",
+      "note": "要求 0"
+    },
+    {
+      "metric": "固定问题集合",
+      "baseline": 38,
+      "candidate": 38,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "B01 事实",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "B01 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "B02 事实",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "B02 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "M01 事实",
+      "baseline": "fail",
+      "candidate": "fail",
+      "status": "PASS",
+      "note": "保留旧版失败"
+    },
+    {
+      "metric": "M01 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "M02 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "M02 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "M03 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "M03 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "M04 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "M04 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S01 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S01 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S02 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S02 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S03 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S03 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S04 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S04 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S05 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S05 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S06 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S06 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S07 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S07 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S08 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S08 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S09 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S09 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S10 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S10 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S11 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S11 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S12 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S12 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S13 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S13 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S14 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S14 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S15 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S15 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S16 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S16 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S17 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S17 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S18 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S18 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S19 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S19 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S20 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S20 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S21 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S21 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S22 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S22 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S23 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S23 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S24 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S24 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S25 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S25 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "S26 事实",
+      "baseline": "fail",
+      "candidate": "fail",
+      "status": "PASS",
+      "note": "保留旧版失败"
+    },
+    {
+      "metric": "S26 契约",
+      "baseline": "not_applicable",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T01 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T01 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T01 context 正确依据",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T01 context 成本",
+      "baseline": "4/1112",
+      "candidate": "1/1035",
+      "status": "PASS",
+      "note": "请求数/UTF-8 字节；同一待测版本内比较"
+    },
+    {
+      "metric": "T01 context 必要提示预算",
+      "baseline": true,
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T02 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T02 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T02 context 正确依据",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T02 context 成本",
+      "baseline": "4/1107",
+      "candidate": "1/1034",
+      "status": "PASS",
+      "note": "请求数/UTF-8 字节；同一待测版本内比较"
+    },
+    {
+      "metric": "T02 context 必要提示预算",
+      "baseline": true,
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T03 事实",
+      "baseline": "fail",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T03 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T03 context 正确依据",
+      "baseline": 6,
+      "candidate": 6,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T03 context 成本",
+      "baseline": "4/1286",
+      "candidate": "1/1209",
+      "status": "PASS",
+      "note": "请求数/UTF-8 字节；同一待测版本内比较"
+    },
+    {
+      "metric": "T03 context 必要提示预算",
+      "baseline": true,
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T04 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T04 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T04 context 正确依据",
+      "baseline": 6,
+      "candidate": 6,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T04 context 成本",
+      "baseline": "4/1311",
+      "candidate": "1/1316",
+      "status": "PASS",
+      "note": "请求数/UTF-8 字节；同一待测版本内比较"
+    },
+    {
+      "metric": "T04 context 必要提示预算",
+      "baseline": true,
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T05 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T05 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T05 context 正确依据",
+      "baseline": 4,
+      "candidate": 4,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T05 context 成本",
+      "baseline": "4/1039",
+      "candidate": "1/845",
+      "status": "PASS",
+      "note": "请求数/UTF-8 字节；同一待测版本内比较"
+    },
+    {
+      "metric": "T05 context 必要提示预算",
+      "baseline": true,
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T06 事实",
+      "baseline": "pass",
+      "candidate": "pass",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T06 契约",
+      "baseline": "not_applicable",
+      "candidate": "not_applicable",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T06 context 正确依据",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "T06 context 成本",
+      "baseline": "4/1112",
+      "candidate": "1/1035",
+      "status": "PASS",
+      "note": "请求数/UTF-8 字节；同一待测版本内比较"
+    },
+    {
+      "metric": "T06 context 必要提示预算",
+      "baseline": true,
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "新增记忆问题前五命中",
+      "baseline": 1,
+      "candidate": 1,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "基线 同场资源覆盖文件",
+      "baseline": "同一二进制和输入",
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "待测 同场资源覆盖文件",
+      "baseline": "同一二进制和输入",
+      "candidate": true,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "资源执行",
+      "baseline": "complete",
+      "candidate": "complete",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "同场逐轮轮换",
+      "baseline": "09137143dcb344a380d278fc5c04d170",
+      "candidate": "09137143dcb344a380d278fc5c04d170",
+      "status": "PASS",
+      "note": "正式同场资源结果"
+    },
+    {
+      "metric": "loom-rust full 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust full 毫秒中位数",
+      "baseline": 282.6526999997441,
+      "candidate": 268.34820001386106,
+      "status": "NOTE",
+      "note": "-5.1%"
+    },
+    {
+      "metric": "loom-rust full 峰值工作集最大字节",
+      "baseline": 11739136,
+      "candidate": 12591104,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust unchanged 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust unchanged 毫秒中位数",
+      "baseline": 36.42940000281669,
+      "candidate": 41.577399999368936,
+      "status": "NOTE",
+      "note": "需要说明：+14.1%"
+    },
+    {
+      "metric": "loom-rust unchanged 峰值工作集最大字节",
+      "baseline": 8679424,
+      "candidate": 9400320,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust one_file 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust one_file 毫秒中位数",
+      "baseline": 43.29659999348223,
+      "candidate": 44.68619998078793,
+      "status": "NOTE",
+      "note": "+3.2%"
+    },
+    {
+      "metric": "loom-rust one_file 峰值工作集最大字节",
+      "baseline": 9875456,
+      "candidate": 10547200,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust explain 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust explain 毫秒中位数",
+      "baseline": 10.153599985642359,
+      "candidate": 19.454500026768073,
+      "status": "NOTE",
+      "note": "需要说明：+91.6%"
+    },
+    {
+      "metric": "loom-rust explain 峰值工作集最大字节",
+      "baseline": 7180288,
+      "candidate": 9228288,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust impact 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "loom-rust impact 毫秒中位数",
+      "baseline": 10.379599989391863,
+      "candidate": 22.2745000210125,
+      "status": "NOTE",
+      "note": "需要说明：+114.6%"
+    },
+    {
+      "metric": "loom-rust impact 峰值工作集最大字节",
+      "baseline": 7204864,
+      "candidate": 9256960,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos full 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos full 毫秒中位数",
+      "baseline": 2143.6605000053532,
+      "candidate": 2099.2654000001494,
+      "status": "NOTE",
+      "note": "-2.1%"
+    },
+    {
+      "metric": "oh-memos full 峰值工作集最大字节",
+      "baseline": 20369408,
+      "candidate": 21442560,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos unchanged 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos unchanged 毫秒中位数",
+      "baseline": 201.5998999995645,
+      "candidate": 194.62840000051074,
+      "status": "NOTE",
+      "note": "-3.5%"
+    },
+    {
+      "metric": "oh-memos unchanged 峰值工作集最大字节",
+      "baseline": 10526720,
+      "candidate": 11399168,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos one_file 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos one_file 毫秒中位数",
+      "baseline": 199.9243999889586,
+      "candidate": 208.37890001712367,
+      "status": "NOTE",
+      "note": "+4.2%"
+    },
+    {
+      "metric": "oh-memos one_file 峰值工作集最大字节",
+      "baseline": 10469376,
+      "candidate": 11411456,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos explain 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos explain 毫秒中位数",
+      "baseline": 10.152300004847348,
+      "candidate": 18.33469999837689,
+      "status": "NOTE",
+      "note": "需要说明：+80.6%"
+    },
+    {
+      "metric": "oh-memos explain 峰值工作集最大字节",
+      "baseline": 7184384,
+      "candidate": 9584640,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos impact 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "oh-memos impact 毫秒中位数",
+      "baseline": 12.08089999272488,
+      "candidate": 18.689999997150153,
+      "status": "NOTE",
+      "note": "需要说明：+54.7%"
+    },
+    {
+      "metric": "oh-memos impact 峰值工作集最大字节",
+      "baseline": 7196672,
+      "candidate": 9601024,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin full 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin full 毫秒中位数",
+      "baseline": 213.25299999443814,
+      "candidate": 218.90269999857992,
+      "status": "NOTE",
+      "note": "+2.6%"
+    },
+    {
+      "metric": "vue-element-admin full 峰值工作集最大字节",
+      "baseline": 10670080,
+      "candidate": 11681792,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin unchanged 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin unchanged 毫秒中位数",
+      "baseline": 81.44700000411831,
+      "candidate": 87.74769998854026,
+      "status": "NOTE",
+      "note": "+7.7%"
+    },
+    {
+      "metric": "vue-element-admin unchanged 峰值工作集最大字节",
+      "baseline": 8941568,
+      "candidate": 9703424,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin one_file 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin one_file 毫秒中位数",
+      "baseline": 95.01449999515899,
+      "candidate": 90.42230001068674,
+      "status": "NOTE",
+      "note": "-4.8%"
+    },
+    {
+      "metric": "vue-element-admin one_file 峰值工作集最大字节",
+      "baseline": 9629696,
+      "candidate": 10559488,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin explain 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin explain 毫秒中位数",
+      "baseline": 11.246000009123236,
+      "candidate": 15.585199987981468,
+      "status": "NOTE",
+      "note": "需要说明：+38.6%"
+    },
+    {
+      "metric": "vue-element-admin explain 峰值工作集最大字节",
+      "baseline": 7188480,
+      "candidate": 9318400,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin impact 轮数",
+      "baseline": 5,
+      "candidate": 5,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "vue-element-admin impact 毫秒中位数",
+      "baseline": 11.966599995503202,
+      "candidate": 15.896400000201538,
+      "status": "NOTE",
+      "note": "需要说明：+32.8%"
+    },
+    {
+      "metric": "vue-element-admin impact 峰值工作集最大字节",
+      "baseline": 7176192,
+      "candidate": 9306112,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "baseline serve 空闲样本数",
+      "baseline": 3,
+      "candidate": 3,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "baseline loom-rust 空闲工作集",
+      "baseline": null,
+      "candidate": 9879552,
+      "status": "NOTE",
+      "note": ""
+    },
+    {
+      "metric": "baseline vue-element-admin 空闲工作集",
+      "baseline": null,
+      "candidate": 9875456,
+      "status": "NOTE",
+      "note": ""
+    },
+    {
+      "metric": "baseline oh-memos 空闲工作集",
+      "baseline": null,
+      "candidate": 10039296,
+      "status": "NOTE",
+      "note": ""
+    },
+    {
+      "metric": "candidate serve 空闲样本数",
+      "baseline": 3,
+      "candidate": 3,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "metric": "candidate loom-rust 空闲工作集",
+      "baseline": null,
+      "candidate": 11575296,
+      "status": "NOTE",
+      "note": ""
+    },
+    {
+      "metric": "candidate vue-element-admin 空闲工作集",
+      "baseline": null,
+      "candidate": 11517952,
+      "status": "NOTE",
+      "note": ""
+    },
+    {
+      "metric": "candidate oh-memos 空闲工作集",
+      "baseline": null,
+      "candidate": 11788288,
+      "status": "NOTE",
+      "note": ""
+    }
+  ]
+}

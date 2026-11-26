@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Loom 产品结构图",
+    "subtitle": "命令行与会话共用项目库。上方显式建索引，中间按快照交付 context 四区；下方的虚线是可选的导入和模型调用。",
+    "quality_profile": "showcase",
+    "viewBox": [1624, 506],
+    "legend": { "mode": "hidden" }
+  },
+  "components": [
+    { "id": "guide", "type": "frontend", "label": "助手接入 · loom guide", "sublabel": "接入项目、搬库、启用模型的步骤随程序分发", "tag": "提示词放进 AGENTS.md，助手照步骤做", "pos": [24, 28], "size": [260, 82] },
+    { "id": "index", "type": "backend", "label": "显式写入 · index", "sublabel": "扫描受管源码，成功后才发布快照", "tag": "独立操作，查询不重建索引", "pos": [344, 28], "size": [260, 82] },
+    { "id": "snapshot", "type": "database", "label": "结构快照与覆盖", "sublabel": "受管、已解析、未覆盖；排除另计", "tag": "generation · 规则与语言配置指纹", "pos": [664, 28], "size": [260, 82] },
+    { "id": "verify", "type": "backend", "label": "现场核对 · 最多 32 个文件", "sublabel": "核对目标、关系端点、声明链及相关配置", "tag": "只核对结果所涉范围，不是全库扫描", "pos": [984, 28], "size": [260, 82] },
+    { "id": "session", "type": "frontend", "label": "MCP 会话服务", "sublabel": "未绑定也能启动，此时只提供 resume", "tag": "绑定后原进程即用；每次调用开库、关库", "pos": [24, 208], "size": [260, 82] },
+    { "id": "context", "type": "frontend", "label": "显式只读查询 · context", "sublabel": "目标文件 + explain 或 impact", "tag": "question 可给空格分隔的词；不调用模型", "pos": [344, 208], "size": [260, 82] },
+    { "id": "project", "type": "database", "label": "读取绑定项目的同一视图", "sublabel": "库默认在项目的 .loom，也可放在任意盘", "tag": "本地 SQLite / FTS · 核对根目录和项目标识", "pos": [664, 208], "size": [260, 82] },
+    { "id": "compose", "type": "frontend", "label": "按一份预算交付四区", "sublabel": "优先保留警示，只放完整的脱敏证据行", "tag": "默认 1500 UTF-8 字节 · 非词元", "pos": [984, 208], "size": [260, 82] },
+    { "id": "import", "type": "external", "label": "旧经验按项目导入", "sublabel": "源文本只读；先预演，确认后写入", "tag": "可选迁移，不连接旧服务", "pos": [24, 388], "size": [260, 82] },
+    { "id": "knowledge", "type": "backend", "label": "人工职责与相关经验", "sublabel": "职责看复核指纹；经验先查本文件锚点", "tag": "再按 question 或符合条件的文件名补查", "pos": [344, 388], "size": [260, 82] },
+    { "id": "recall", "type": "backend", "label": "经验检索 · recall", "sublabel": "默认查关键词；启用后加向量，可再重排", "tag": "首行说明检索方式；向量失败退回关键词", "pos": [664, 388], "size": [260, 82] },
+    { "id": "models", "type": "cloud", "label": "进程外模型 · 默认关闭", "sublabel": "本机：Ollama 算向量，llama-server 重排", "tag": "云端：OpenAI 兼容接口，只用 https", "pos": [984, 388], "size": [260, 82] },
+    { "id": "constraints", "type": "frontend", "label": "① 身份与有效约束", "sublabel": "目标、红线仅在经人确认后生效", "tag": "还有约束未展示时明确提示", "pos": [1340, 28], "size": [260, 82] },
+    { "id": "relations", "type": "frontend", "label": "② 结构证据", "sublabel": "静态确定、可能分列，保留使用方行号", "tag": "explain 查依赖；impact 查使用方", "pos": [1340, 148], "size": [260, 82] },
+    { "id": "roles", "type": "frontend", "label": "③ 职责与经验", "sublabel": "职责标复核状态；经验列出处和编号", "tag": "历史职责不能替人复核或证明依赖", "pos": [1340, 268], "size": [260, 82] },
+    { "id": "gaps", "type": "frontend", "label": "④ 缺口与续查", "sublabel": "区分未覆盖、未确定、已变化和省略", "tag": "列出下一步可查的目标或记录", "pos": [1340, 388], "size": [260, 82] }
+  ],
+  "connections": [
+    { "from": "session", "to": "guide", "label": "未绑定时指引", "fromSide": "top", "toSide": "bottom" },
+    { "from": "guide", "to": "index", "fromSide": "right", "toSide": "left" },
+    { "from": "session", "to": "context", "label": "绑定后", "fromSide": "right", "toSide": "left" },
+    { "from": "context", "to": "project", "fromSide": "right", "toSide": "left" },
+    { "from": "project", "to": "compose", "fromSide": "right", "toSide": "left" },
+    { "from": "index", "to": "snapshot", "label": "发布", "fromSide": "right", "toSide": "left" },
+    { "from": "snapshot", "to": "project", "fromSide": "bottom", "toSide": "top" },
+    { "from": "snapshot", "to": "verify", "label": "比对", "fromSide": "right", "toSide": "left" },
+    { "from": "verify", "to": "compose", "fromSide": "bottom", "toSide": "top" },
+    { "from": "import", "to": "knowledge", "label": "经验", "variant": "dashed", "fromSide": "right", "toSide": "left" },
+    { "from": "knowledge", "to": "project", "fromSide": "top", "toSide": "bottom" },
+    { "from": "knowledge", "to": "recall", "label": "经验", "fromSide": "right", "toSide": "left" },
+    { "from": "recall", "to": "models", "label": "可选", "variant": "dashed", "fromSide": "right", "toSide": "left" },
+    { "from": "compose", "to": "constraints", "fromSide": "top", "toSide": "left" },
+    { "from": "compose", "to": "relations", "fromSide": "right", "toSide": "left" },
+    { "from": "compose", "to": "roles", "fromSide": "right", "toSide": "left" },
+    { "from": "compose", "to": "gaps", "fromSide": "bottom", "toSide": "left" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "快照能证明什么？", "items": [
+      "found：查到关系，仍可能有遗漏。gap：证据有缺口，不能判断。",
+      "none_in_snapshot：只在这次快照、所查方向的受管范围内未找到，不等于当前项目没有。",
+      "现场核对不能发现新增文件。根目录与项目标识对不上就停止，不展示别的项目。"
+    ] },
+    { "dot": "cyan", "title": "库放在哪？", "items": [
+      "库位置是本机设置，不是项目事实。改用其他位置时，项目用 .loom/database.path 记住它。",
+      "loom db move 可以跨盘搬库：先拷贝并校验，通过后才切换位置。",
+      "loom config set storage.data_dir 只改以后新项目的默认目录，不搬已有的库。"
+    ] },
+    { "dot": "slate", "title": "哪些事要先问人？", "items": [
+      "助手可直接绑定项目、建索引。意图生效或失效、复核文件职责，要人明确同意后助手才执行。",
+      "搬库、改默认目录、启用模型、分享、导入和删除也要先问。密钥不经过对话。",
+      "模型地址、模型名和密钥来源只写在用户级配置。每个项目单独启用，同意只对确认过的模型地址有效。"
+    ] },
+    { "dot": "amber", "title": "模型能看到什么？", "items": [
+      "只发送脱敏后的有效经验标题、正文和查询词。不发送编号、路径、源码、意图或文件职责。",
+      "向量存在项目库，是可以清空重建的派生数据。重排失败则保留关键词和向量的合并结果。",
+      "真实模型的检索收益还没有测过。未启用时只查关键词，不向模型发请求。"
+    ] }
+  ]
+}

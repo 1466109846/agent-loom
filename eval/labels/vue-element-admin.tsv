@@ -1,0 +1,41 @@
+id	category	source	line	target	basis
+vue-001	exact	src/components/ImageCropper/index.vue	140	src/components/ImageCropper/utils/language.js	Vue compiler-sfc定位脚本块、Babel定位static，enhanced-resolve两套别名参照均将显式相对路径./utils/language.js定位到书写文件，非动态导入，故静态确定。
+vue-002	exact	src/components/ImageCropper/index.vue	141	src/components/ImageCropper/utils/mimes.js	Vue compiler-sfc定位脚本块、Babel定位static，enhanced-resolve两套别名参照均将显式相对路径./utils/mimes.js定位到书写文件，非动态导入，故静态确定。
+vue-003	exact	src/components/ImageCropper/index.vue	142	src/components/ImageCropper/utils/data2blob.js	Vue compiler-sfc定位脚本块、Babel定位static，enhanced-resolve两套别名参照均将显式相对路径./utils/data2blob.js定位到书写文件，非动态导入，故静态确定。
+vue-004	exact	src/components/ImageCropper/index.vue	143	src/components/ImageCropper/utils/effectRipple.js	Vue compiler-sfc定位脚本块、Babel定位static，enhanced-resolve两套别名参照均将显式相对路径./utils/effectRipple.js定位到书写文件，非动态导入，故静态确定。
+vue-005	exact	src/layout/components/index.js	4	src/layout/components/Sidebar/index.vue	Vue compiler-sfc定位脚本块、Babel定位reexport，enhanced-resolve两套别名参照均将显式相对路径./Sidebar/index.vue定位到书写文件，非动态导入，故静态确定。
+vue-006	exact	src/layout/components/index.js	5	src/layout/components/TagsView/index.vue	Vue compiler-sfc定位脚本块、Babel定位reexport，enhanced-resolve两套别名参照均将显式相对路径./TagsView/index.vue定位到书写文件，非动态导入，故静态确定。
+vue-007	exact	src/views/dashboard/admin/components/TodoList/index.vue	41	src/views/dashboard/admin/components/TodoList/Todo.vue	Vue compiler-sfc定位脚本块、Babel定位static，enhanced-resolve两套别名参照均将显式相对路径./Todo.vue定位到书写文件，非动态导入，故静态确定。
+vue-008	likely	src/api/article.js	1	src/utils/request.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/utils/request，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-009	likely	src/api/qiniu.js	1	src/utils/request.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/utils/request，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-010	likely	src/api/remote-search.js	1	src/utils/request.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/utils/request，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-011	likely	src/api/role.js	1	src/utils/request.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/utils/request，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-012	likely	src/components/ImageCropper/index.vue	139	src/utils/request.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/utils/request，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-013	likely	src/components/Pagination/index.vue	18	src/utils/scroll-to.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/utils/scroll-to，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-014	likely	src/filters/index.js	2	src/utils/index.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/utils，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-015	likely	src/router/index.js	7	src/layout/index.vue	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/layout，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-016	likely	src/layout/index.vue	19	src/components/RightPanel/index.vue	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/components/RightPanel，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-017	likely	src/views/excel/export-excel.vue	48	src/api/article.js	Babel与enhanced-resolve按最近jsconfig的@/*→src/*定位@/api/article，按vue.config.js的@→src复算目标相同；设计第7节规定经别名的唯一目标只算可能。
+vue-018	likely	src/main.js	13	src/App.vue	compiler-sfc/Babel取导入./App，enhanced-resolve定位src/App.vue；已核对所有脚本扩展名及index候选落空，仅.vue回退命中，设计第7节规定为可能。
+vue-019	likely	src/layout/components/index.js	1	src/layout/components/AppMain.vue	compiler-sfc/Babel取导入./AppMain，enhanced-resolve定位src/layout/components/AppMain.vue；已核对所有脚本扩展名及index候选落空，仅.vue回退命中，设计第7节规定为可能。
+vue-020	likely	src/layout/components/index.js	2	src/layout/components/Navbar.vue	compiler-sfc/Babel取导入./Navbar，enhanced-resolve定位src/layout/components/Navbar.vue；已核对所有脚本扩展名及index候选落空，仅.vue回退命中，设计第7节规定为可能。
+vue-021	likely	src/views/excel/export-excel.vue	51	src/views/excel/components/FilenameOption.vue	compiler-sfc/Babel取导入./components/FilenameOption，enhanced-resolve定位src/views/excel/components/FilenameOption.vue；已核对所有脚本扩展名及index候选落空，仅.vue回退命中，设计第7节规定为可能。
+vue-022	likely	src/views/excel/export-excel.vue	52	src/views/excel/components/AutoWidthOption.vue	compiler-sfc/Babel取导入./components/AutoWidthOption，enhanced-resolve定位src/views/excel/components/AutoWidthOption.vue；已核对所有脚本扩展名及index候选落空，仅.vue回退命中，设计第7节规定为可能。
+vue-023	likely	build/index.js	3	vue.config.js	compiler-sfc/Babel在整文件第3行识别字面量require(../vue.config.js)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-024	likely	mock/index.js	2	mock/utils.js	compiler-sfc/Babel在整文件第2行识别字面量require(./utils)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-025	likely	src/main.js	32	mock/index.js	compiler-sfc/Babel在整文件第32行识别字面量require(../mock)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-026	likely	vue.config.js	3	src/settings.js	compiler-sfc/Babel在整文件第3行识别字面量require(./src/settings.js)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-027	likely	src/views/pdf/download.vue	29	src/views/pdf/content.js	compiler-sfc/Babel在整文件第29行识别字面量dynamic(./content.js)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-028	likely	src/views/excel/export-excel.vue	81	src/vendor/Export2Excel.js	compiler-sfc/Babel在整文件第81行识别字面量dynamic(@/vendor/Export2Excel)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-029	likely	src/views/excel/merge-header.vue	74	src/vendor/Export2Excel.js	compiler-sfc/Babel在整文件第74行识别字面量dynamic(@/vendor/Export2Excel)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-030	likely	src/router/index.js	49	src/views/redirect/index.vue	compiler-sfc/Babel在整文件第49行识别字面量dynamic(@/views/redirect/index)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-031	likely	src/router/index.js	55	src/views/login/index.vue	compiler-sfc/Babel在整文件第55行识别字面量dynamic(@/views/login/index)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-032	likely	src/router/index.js	65	src/views/error-page/404.vue	compiler-sfc/Babel在整文件第65行识别字面量dynamic(@/views/error-page/404)，enhanced-resolve两套参照目标一致；设计第7节规定动态import/require即使写全文件名也只算可能。
+vue-033	none	src/components/ImageCropper/index.vue	140	src/components/ImageCropper/utils/mimes.js	Babel识别此行说明符为./utils/language.js，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/components/ImageCropper/utils/language.js；同目录/同名入口或另一页面src/components/ImageCropper/utils/mimes.js不应成为该行目标。
+vue-034	none	src/components/ImageCropper/index.vue	141	src/components/ImageCropper/utils/language.js	Babel识别此行说明符为./utils/mimes.js，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/components/ImageCropper/utils/mimes.js；同目录/同名入口或另一页面src/components/ImageCropper/utils/language.js不应成为该行目标。
+vue-035	none	src/layout/components/index.js	4	src/layout/components/TagsView/index.vue	Babel识别此行说明符为./Sidebar/index.vue，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/layout/components/Sidebar/index.vue；同目录/同名入口或另一页面src/layout/components/TagsView/index.vue不应成为该行目标。
+vue-036	none	src/views/dashboard/admin/components/TodoList/index.vue	41	src/views/dashboard/admin/components/TodoList/index.vue	Babel识别此行说明符为./Todo.vue，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/views/dashboard/admin/components/TodoList/Todo.vue；同目录/同名入口或另一页面src/views/dashboard/admin/components/TodoList/index.vue不应成为该行目标。
+vue-037	none	src/api/article.js	1	src/utils/auth.js	Babel识别此行说明符为@/utils/request，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/utils/request.js；同目录/同名入口或另一页面src/utils/auth.js不应成为该行目标。
+vue-038	none	src/router/index.js	55	src/views/redirect/index.vue	Babel识别此行说明符为@/views/login/index，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/views/login/index.vue；同目录/同名入口或另一页面src/views/redirect/index.vue不应成为该行目标。
+vue-039	none	src/views/pdf/download.vue	29	src/views/pdf/download.vue	Babel识别此行说明符为./content.js，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/views/pdf/content.js；同目录/同名入口或另一页面src/views/pdf/download.vue不应成为该行目标。
+vue-040	none	src/views/excel/export-excel.vue	81	src/vendor/Export2Zip.js	Babel识别此行说明符为@/vendor/Export2Excel，enhanced-resolve按jsconfig和打包器别名分别解析均只指向src/vendor/Export2Excel.js；同目录/同名入口或另一页面src/vendor/Export2Zip.js不应成为该行目标。

@@ -1,0 +1,13 @@
+/target
+.loom/
+*.db
+*.db-wal
+*.db-shm
+/tmp/
+AGENTS.md
+.env
+.env.*
+!.env.example
+credentials.toml
+/.zcode/
+__pycache__/

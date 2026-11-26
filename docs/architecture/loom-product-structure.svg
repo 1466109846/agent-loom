@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1624" height="834" viewBox="0 0 1624 834" role="img" aria-labelledby="title summary" lang="zh-CN" xml:lang="zh-CN">
+  <title id="title">Loom 产品结构图</title>
+  <desc id="summary">命令行与会话共用项目库。上方显式建索引，中间按快照交付 context 四区；下方的虚线是可选的导入和模型调用。</desc>
+  <style>text { font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; fill: #183931; }
+.heading { font-size: 32px; font-weight: 700; } .label, .section { font-size: 17px; font-weight: 700; }
+.intro { font-size: 15px; } .sub { font-size: 12px; } .body { font-size: 14px; } .tag, .caption { font-size: 12px; fill: #405a50; }
+.node rect { rx: 8px; stroke-width: 1.5px; } .read rect { fill: #e7f3ec; stroke: #8bb4a3; } .write rect { fill: #f8f3e8; stroke: #bfac86; }
+.output rect { fill: #e9f1f7; stroke: #99b4c5; } .entry rect { fill: #184f43; stroke: #133f36; } .entry text { fill: #fff; }
+.optional rect { fill: #f1eef5; stroke: #a697b2; stroke-dasharray: 6 4; } .edge { stroke: #648479; stroke-width: 1.8px; fill: none; }
+ .model rect { fill: #fcf4e4; stroke: #bd8d40; stroke-dasharray: 6 4; }
+</style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#648479"/>
+    </marker>
+  </defs>
+  <rect width="1624" height="834" fill="#f8faf7"/>
+  <path d="M32 34h34 M32 44h34 M32 54h34" stroke="#88b5a4" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M38 61V28 M49 61V28 M60 61V28" stroke="#245e51" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M34 34h8 M45 44h8 M56 54h8" stroke="#88b5a4" stroke-width="3" fill="none"/>
+  <text x="88" y="53" class="heading">Loom 产品结构图</text>
+  <text x="88" y="80" class="intro">命令行与会话共用项目库。上方显式建索引，中间按快照交付 context 四区；下方的虚线是可选的导入和模型调用。</text>
+  <path d="M24 99H1600" stroke="#c8d6cd"/>
+  <g id="map" transform="translate(0 99)">
+    <path id="session-to-guide" d="M 154 208 L 154 110" class="edge" marker-end="url(#arrow)"/>
+    <text x="166" y="164" class="caption" text-anchor="start">未绑定时指引</text>
+    <path id="guide-to-index" d="M 284 69 L 344 69" class="edge" marker-end="url(#arrow)"/>
+    <path id="session-to-context" d="M 284 249 L 344 249" class="edge" marker-end="url(#arrow)"/>
+    <text x="314" y="239" class="caption" text-anchor="middle">绑定后</text>
+    <path id="context-to-project" d="M 604 249 L 664 249" class="edge" marker-end="url(#arrow)"/>
+    <path id="project-to-compose" d="M 924 249 L 984 249" class="edge" marker-end="url(#arrow)"/>
+    <path id="index-to-snapshot" d="M 604 69 L 664 69" class="edge" marker-end="url(#arrow)"/>
+    <text x="634" y="59" class="caption" text-anchor="middle">发布</text>
+    <path id="snapshot-to-project" d="M 794 110 L 794 208" class="edge" marker-end="url(#arrow)"/>
+    <path id="snapshot-to-verify" d="M 924 69 L 984 69" class="edge" marker-end="url(#arrow)"/>
+    <text x="954" y="59" class="caption" text-anchor="middle">比对</text>
+    <path id="verify-to-compose" d="M 1107 110 L 1107 208" class="edge" marker-end="url(#arrow)"/>
+    <path id="import-to-knowledge" d="M 284 429 L 344 429" class="edge" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+    <text x="314" y="419" class="caption" text-anchor="middle">经验</text>
+    <path id="knowledge-to-project" d="M 474 388 L 474 347 Q 474 339 482 339 L 786 339 Q 794 339 794 331 L 794 290" class="edge" marker-end="url(#arrow)"/>
+    <path id="knowledge-to-recall" d="M 604 429 L 664 429" class="edge" marker-end="url(#arrow)"/>
+    <text x="634" y="419" class="caption" text-anchor="middle">经验</text>
+    <path id="recall-to-models" d="M 924 429 L 984 429" class="edge" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+    <text x="954" y="419" class="caption" text-anchor="middle">可选</text>
+    <path id="compose-to-constraints" d="M 1121 208 L 1121 192 Q 1121 184 1129 184 L 1308 184 Q 1316 184 1316 176 L 1316 77 Q 1316 69 1324 69 L 1340 69" class="edge" marker-end="url(#arrow)"/>
+    <path id="compose-to-relations" d="M 1244 242 L 1284 242 Q 1292 242 1292 234 L 1292 197 Q 1292 189 1300 189 L 1340 189" class="edge" marker-end="url(#arrow)"/>
+    <path id="compose-to-roles" d="M 1244 256 L 1284 256 Q 1292 256 1292 264 L 1292 301 Q 1292 309 1300 309 L 1340 309" class="edge" marker-end="url(#arrow)"/>
+    <path id="compose-to-gaps" d="M 1114 290 L 1114 306 Q 1114 314 1122 314 L 1308 314 Q 1316 314 1316 322 L 1316 421 Q 1316 429 1324 429 L 1340 429" class="edge" marker-end="url(#arrow)"/>
+    <g id="node-guide" data-node="guide" class="node write" transform="translate(24 28)">
+      <title>助手接入 · loom guide · 接入项目、搬库、启用模型的步骤随程序分发 · 提示词放进 AGENTS.md，助手照步骤做</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">助手接入 · loom guide</text>
+      <text x="12" y="48" class="sub">接入项目、搬库、启用模型的步骤随程序分发</text>
+      <text x="12" y="68" class="tag">提示词放进 AGENTS.md，助手照步骤做</text>
+    </g>
+    <g id="node-index" data-node="index" class="node write" transform="translate(344 28)">
+      <title>显式写入 · index · 扫描受管源码，成功后才发布快照 · 独立操作，查询不重建索引</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">显式写入 · index</text>
+      <text x="12" y="48" class="sub">扫描受管源码，成功后才发布快照</text>
+      <text x="12" y="68" class="tag">独立操作，查询不重建索引</text>
+    </g>
+    <g id="node-snapshot" data-node="snapshot" class="node read" transform="translate(664 28)">
+      <title>结构快照与覆盖 · 受管、已解析、未覆盖；排除另计 · generation · 规则与语言配置指纹</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">结构快照与覆盖</text>
+      <text x="12" y="48" class="sub">受管、已解析、未覆盖；排除另计</text>
+      <text x="12" y="68" class="tag">generation · 规则与语言配置指纹</text>
+    </g>
+    <g id="node-verify" data-node="verify" class="node read" transform="translate(984 28)">
+      <title>现场核对 · 最多 32 个文件 · 核对目标、关系端点、声明链及相关配置 · 只核对结果所涉范围，不是全库扫描</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">现场核对 · 最多 32 个文件</text>
+      <text x="12" y="48" class="sub">核对目标、关系端点、声明链及相关配置</text>
+      <text x="12" y="68" class="tag">只核对结果所涉范围，不是全库扫描</text>
+    </g>
+    <g id="node-session" data-node="session" class="node read" transform="translate(24 208)">
+      <title>MCP 会话服务 · 未绑定也能启动，此时只提供 resume · 绑定后原进程即用；每次调用开库、关库</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">MCP 会话服务</text>
+      <text x="12" y="48" class="sub">未绑定也能启动，此时只提供 resume</text>
+      <text x="12" y="68" class="tag">绑定后原进程即用；每次调用开库、关库</text>
+    </g>
+    <g id="node-context" data-node="context" class="node entry" transform="translate(344 208)">
+      <title>显式只读查询 · context · 目标文件 + explain 或 impact · question 可给空格分隔的词；不调用模型</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">显式只读查询 · context</text>
+      <text x="12" y="48" class="sub">目标文件 + explain 或 impact</text>
+      <text x="12" y="68" class="tag">question 可给空格分隔的词；不调用模型</text>
+    </g>
+    <g id="node-project" data-node="project" class="node read" transform="translate(664 208)">
+      <title>读取绑定项目的同一视图 · 库默认在项目的 .loom，也可放在任意盘 · 本地 SQLite / FTS · 核对根目录和项目标识</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">读取绑定项目的同一视图</text>
+      <text x="12" y="48" class="sub">库默认在项目的 .loom，也可放在任意盘</text>
+      <text x="12" y="68" class="tag">本地 SQLite / FTS · 核对根目录和项目标识</text>
+    </g>
+    <g id="node-compose" data-node="compose" class="node output" transform="translate(984 208)">
+      <title>按一份预算交付四区 · 优先保留警示，只放完整的脱敏证据行 · 默认 1500 UTF-8 字节 · 非词元</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">按一份预算交付四区</text>
+      <text x="12" y="48" class="sub">优先保留警示，只放完整的脱敏证据行</text>
+      <text x="12" y="68" class="tag">默认 1500 UTF-8 字节 · 非词元</text>
+    </g>
+    <g id="node-import" data-node="import" class="node optional" transform="translate(24 388)">
+      <title>旧经验按项目导入 · 源文本只读；先预演，确认后写入 · 可选迁移，不连接旧服务</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">旧经验按项目导入</text>
+      <text x="12" y="48" class="sub">源文本只读；先预演，确认后写入</text>
+      <text x="12" y="68" class="tag">可选迁移，不连接旧服务</text>
+    </g>
+    <g id="node-knowledge" data-node="knowledge" class="node read" transform="translate(344 388)">
+      <title>人工职责与相关经验 · 职责看复核指纹；经验先查本文件锚点 · 再按 question 或符合条件的文件名补查</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">人工职责与相关经验</text>
+      <text x="12" y="48" class="sub">职责看复核指纹；经验先查本文件锚点</text>
+      <text x="12" y="68" class="tag">再按 question 或符合条件的文件名补查</text>
+    </g>
+    <g id="node-recall" data-node="recall" class="node read" transform="translate(664 388)">
+      <title>经验检索 · recall · 默认查关键词；启用后加向量，可再重排 · 首行说明检索方式；向量失败退回关键词</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">经验检索 · recall</text>
+      <text x="12" y="48" class="sub">默认查关键词；启用后加向量，可再重排</text>
+      <text x="12" y="68" class="tag">首行说明检索方式；向量失败退回关键词</text>
+    </g>
+    <g id="node-models" data-node="models" class="node model" transform="translate(984 388)">
+      <title>进程外模型 · 默认关闭 · 本机：Ollama 算向量，llama-server 重排 · 云端：OpenAI 兼容接口，只用 https</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">进程外模型 · 默认关闭</text>
+      <text x="12" y="48" class="sub">本机：Ollama 算向量，llama-server 重排</text>
+      <text x="12" y="68" class="tag">云端：OpenAI 兼容接口，只用 https</text>
+    </g>
+    <g id="node-constraints" data-node="constraints" class="node output" transform="translate(1340 28)">
+      <title>① 身份与有效约束 · 目标、红线仅在经人确认后生效 · 还有约束未展示时明确提示</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">① 身份与有效约束</text>
+      <text x="12" y="48" class="sub">目标、红线仅在经人确认后生效</text>
+      <text x="12" y="68" class="tag">还有约束未展示时明确提示</text>
+    </g>
+    <g id="node-relations" data-node="relations" class="node output" transform="translate(1340 148)">
+      <title>② 结构证据 · 静态确定、可能分列，保留使用方行号 · explain 查依赖；impact 查使用方</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">② 结构证据</text>
+      <text x="12" y="48" class="sub">静态确定、可能分列，保留使用方行号</text>
+      <text x="12" y="68" class="tag">explain 查依赖；impact 查使用方</text>
+    </g>
+    <g id="node-roles" data-node="roles" class="node output" transform="translate(1340 268)">
+      <title>③ 职责与经验 · 职责标复核状态；经验列出处和编号 · 历史职责不能替人复核或证明依赖</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">③ 职责与经验</text>
+      <text x="12" y="48" class="sub">职责标复核状态；经验列出处和编号</text>
+      <text x="12" y="68" class="tag">历史职责不能替人复核或证明依赖</text>
+    </g>
+    <g id="node-gaps" data-node="gaps" class="node output" transform="translate(1340 388)">
+      <title>④ 缺口与续查 · 区分未覆盖、未确定、已变化和省略 · 列出下一步可查的目标或记录</title>
+      <rect width="260" height="82" rx="8"/>
+      <text x="12" y="25" class="label">④ 缺口与续查</text>
+      <text x="12" y="48" class="sub">区分未覆盖、未确定、已变化和省略</text>
+      <text x="12" y="68" class="tag">列出下一步可查的目标或记录</text>
+    </g>
+  </g>
+  <rect x="24" y="605" width="1576" rx="8" fill="#eef3ef" stroke="#d4e0d7" height="213"/>
+  <text x="40" y="636" class="section">快照能证明什么？</text>
+  <text class="body" aria-label="found：查到关系，仍可能有遗漏。gap：证据有缺口，不能判断。">
+    <tspan x="40" y="663">found：查到关系，仍可能有遗漏。gap：证据有缺口，</tspan>
+    <tspan x="40" y="684">不能判断。</tspan>
+  </text>
+  <text class="body" aria-label="none_in_snapshot：只在这次快照、所查方向的受管范围内未找到，不等于当前项目没有。">
+    <tspan x="40" y="716">none_in_snapshot：只在这次快照、所查方向的受管范</tspan>
+    <tspan x="40" y="737">围内未找到，不等于当前项目没有。</tspan>
+  </text>
+  <text class="body" aria-label="现场核对不能发现新增文件。根目录与项目标识对不上就停止，不展示别的项目。">
+    <tspan x="40" y="769">现场核对不能发现新增文件。根目录与项目标识对不上就</tspan>
+    <tspan x="40" y="790">停止，不展示别的项目。</tspan>
+  </text>
+  <path stroke="#c6d6cb" d="M418 621V802"/>
+  <text x="434" y="636" class="section">库放在哪？</text>
+  <text class="body" aria-label="库位置是本机设置，不是项目事实。改用其他位置时，项目用 .loom/database.path 记住它。">
+    <tspan x="434" y="663">库位置是本机设置，不是项目事实。改用其他位置时，项</tspan>
+    <tspan x="434" y="684">目用 .loom/database.path 记住它。</tspan>
+  </text>
+  <text class="body" aria-label="loom db move 可以跨盘搬库：先拷贝并校验，通过后才切换位置。">
+    <tspan x="434" y="716">loom db move 可以跨盘搬库：先拷贝并校验，通过后才</tspan>
+    <tspan x="434" y="737">切换位置。</tspan>
+  </text>
+  <text class="body" aria-label="loom config set storage.data_dir 只改以后新项目的默认目录，不搬已有的库。">
+    <tspan x="434" y="769">loom config set storage.data_dir 只改以后新项目的默</tspan>
+    <tspan x="434" y="790">认目录，不搬已有的库。</tspan>
+  </text>
+  <path stroke="#c6d6cb" d="M812 621V802"/>
+  <text x="828" y="636" class="section">哪些事要先问人？</text>
+  <text class="body" aria-label="助手可直接绑定项目、建索引。意图生效或失效、复核文件职责，要人明确同意后助手才执行。">
+    <tspan x="828" y="663">助手可直接绑定项目、建索引。意图生效或失效、复核文</tspan>
+    <tspan x="828" y="684">件职责，要人明确同意后助手才执行。</tspan>
+  </text>
+  <text class="body" aria-label="搬库、改默认目录、启用模型、分享、导入和删除也要先问。密钥不经过对话。">
+    <tspan x="828" y="716">搬库、改默认目录、启用模型、分享、导入和删除也要先</tspan>
+    <tspan x="828" y="737">问。密钥不经过对话。</tspan>
+  </text>
+  <text class="body" aria-label="模型地址、模型名和密钥来源只写在用户级配置。每个项目单独启用，同意只对确认过的模型地址有效。">
+    <tspan x="828" y="769">模型地址、模型名和密钥来源只写在用户级配置。每个项</tspan>
+    <tspan x="828" y="790">目单独启用，同意只对确认过的模型地址有效。</tspan>
+  </text>
+  <path stroke="#c6d6cb" d="M1206 621V802"/>
+  <text x="1222" y="636" class="section">模型能看到什么？</text>
+  <text class="body" aria-label="只发送脱敏后的有效经验标题、正文和查询词。不发送编号、路径、源码、意图或文件职责。">
+    <tspan x="1222" y="663">只发送脱敏后的有效经验标题、正文和查询词。不发送编</tspan>
+    <tspan x="1222" y="684">号、路径、源码、意图或文件职责。</tspan>
+  </text>
+  <text class="body" aria-label="向量存在项目库，是可以清空重建的派生数据。重排失败则保留关键词和向量的合并结果。">
+    <tspan x="1222" y="716">向量存在项目库，是可以清空重建的派生数据。重排失败</tspan>
+    <tspan x="1222" y="737">则保留关键词和向量的合并结果。</tspan>
+  </text>
+  <text class="body" aria-label="真实模型的检索收益还没有测过。未启用时只查关键词，不向模型发请求。">
+    <tspan x="1222" y="769">真实模型的检索收益还没有测过。未启用时只查关键词，</tspan>
+    <tspan x="1222" y="790">不向模型发请求。</tspan>
+  </text>
+</svg>
