@@ -6,7 +6,7 @@
 
 ### 2026-11-27
 
-- **文档入口改为双语。** [英文首页](README.md)和[中文完整手册](README.zh-CN.md)互链；新增 MCP 使用与客户端配置手册（[English](doc/MCP/README.md) / [简体中文](doc/MCP/README.zh-CN.md)）。[设计文档](docs/DESIGN.md#design-debt)区分了当前差距、待补的验收证据和后续方向；不改变运行时行为。
+- **文档入口改为双语，并先说清为什么要装。** [英文首页](README.md)和[中文完整手册](README.zh-CN.md)互链，开头改为先讲助手每会话重复阅读和重复推导的成本，再用一张表列出 Loom 省掉的重复工作及其已记录的实测，明确写出词元节省与回答质量尚未计量。新增 MCP 使用与客户端配置手册（[English](doc/MCP/README.md) / [简体中文](doc/MCP/README.zh-CN.md)）。[设计文档](docs/DESIGN.md#design-debt)区分了当前差距、待补的验收证据和后续方向；不改变运行时行为。
 
 ### 2026-11-26
 

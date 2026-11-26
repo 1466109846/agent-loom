@@ -2,16 +2,33 @@
 
 **[简体中文](README.zh-CN.md)**
 
-Local project memory and source-dependency evidence for coding agents. Loom keeps decisions, constraints and lessons in a project-bound SQLite database, builds a separate, rebuildable source index, and retrieves the relevant context when work needs it.
+Local project memory and dependency evidence for coding agents. One executable and one SQLite file per project; no server, no account, and no network for the core workflow.
 
-Code can tell an agent what exists; it rarely explains why a decision was made or where an interrupted task stopped. Loom preserves that information without turning every session into a replay of the entire project history.
+Code tells an agent what exists. It rarely explains why a decision was made, which files a change will break, or where the last session stopped. So every session begins by rediscovering the project — and that rediscovery is paid for twice: in tokens spent reading the same files again, and in decisions re-derived or quietly reversed.
 
-- **Local by default.** One executable; no database server, model service or network required for the core workflow.
-- **Traceable dependencies.** Follow a file reference back to its line in the file that uses it. Results distinguish definite and possible relationships and identify gaps in the indexed snapshot. This is a file-dependency graph, not a function call graph.
-- **Context before an edit.** One request returns confirmed constraints, files used by or depending on the target, recorded file responsibilities, relevant memories and anything the index could not establish.
-- **Human-controlled knowledge.** Proposals do not become constraints automatically; source changes flag anchored knowledge for review. Optional model retrieval stays off until enabled.
+Loom keeps that knowledge next to the project and returns it in bounded answers:
+
+- **Why it is like this** — decisions, constraints and hard-won lessons, anchored to the files they concern and flagged when those files change.
+- **What depends on what** — referencing files with line numbers, separating definite evidence from likely candidates.
+- **What to know before editing** — constraints, both dependency directions, file responsibilities, relevant lessons and known gaps in one call.
+- **Where we stopped** — the unfinished task, its next step and where the evidence sits.
+- **What has been agreed** — proposals stay inactive until a human confirms them; the confirmed set is delivered once per session.
+
+It is a file-dependency graph, not a function call graph. Models are optional and off by default. Everything above works offline, from a local database and a rebuildable index.
 
 [Install](#install) · [Quick start](#try-it-in-a-project) · [Workflow](#workflow-and-feature-map) · [MCP client setup](doc/MCP/clients.md) · [Storage and models](#optional-storage-and-models) · [Evidence and limits](#evidence-and-current-limits)
+
+## What it saves
+
+| Repeated work it removes | What Loom returns instead | Recorded evidence |
+|---|---|---|
+| Searching and opening files to find who uses one | `impact` / `explain`: referencing files, line numbers, and definite versus possible | On a 606-file copy of a real project, unresolved references fell from 3,508 to 1,858; the 1,650 new links are all marked possible |
+| Four separate lookups before touching a file (constraints, callers, file role, past incidents) | One `context` call, within one byte budget | Six fixed tasks: 4 requests reduced to 1 per task, all 31 required evidence items retained |
+| Restating constraints and re-deriving decisions every session | Confirmed intents and pinned lessons in a capped opening | 800-byte opening and 2,000-byte `overview`, delivered once per session |
+| Reconstructing an interrupted task from chat history | `resume`: task, next step, evidence location | Mechanism verified end to end; savings not measured |
+| Re-deciding what a file is for | `note`: a human-reviewed role tied to a source fingerprint | Mechanism verified; savings not measured |
+
+Every answer has a hard cap: opening 800 bytes, `overview` 2,000, `context` 1,500 by default and 6,144 at most, and 1,500 for each `recall` / `resume` / `explain` / `impact` preview. A session pays a known amount instead of an open-ended file dump. These are UTF-8 byte budgets, not token counts; **direct token savings and answer-quality gains have not been measured.** The request reduction and retained-evidence results above are what the current evidence supports. See [evidence and current limits](#evidence-and-current-limits) and [design debt](docs/DESIGN.md#design-debt).
 
 > CLI help, bundled `loom guide` instructions and human-readable command/tool output are currently Chinese. English memory content works unchanged. For English agent onboarding, use the prompt below and the [English MCP guide](doc/MCP/README.md).
 
@@ -216,7 +233,7 @@ Result summaries and hashes are retained, but some historical per-question raw o
 
 ## Latest changes
 
-- **2026-11-27 — Bilingual documentation:** English entry point, preserved Chinese guide and dedicated MCP documentation.
+- **2026-11-27 — Bilingual documentation:** a value-first English entry point, the preserved Chinese guide, and dedicated MCP documentation.
 - **2026-11-26 — MIT license:** one license for the project and offline package.
 - **2026-11-26 — Flexible database storage:** remembered locations, a default data directory and verified database moves.
 - **2026-11-26 — Assistant-led onboarding:** bundled guides and an unbound-server setup path.
